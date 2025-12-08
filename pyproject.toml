@@ -1,0 +1,7 @@
+[project]
+name = "Eminder"
+
+[project.scripts]
+# This creates a 'Eminder' command that can be run from anywhere after installation
+# It maps to the run() function in Eminder.main module
+Eminder = "Eminder.main:run"
