@@ -1,4 +1,4 @@
-from Eminder.modules import logger
+from modules import logger
 
 __all__ = [
     # Utils - Logging

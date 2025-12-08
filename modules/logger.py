@@ -16,7 +16,7 @@ import logging
 import sys
 from pathlib import Path
 from datetime import datetime
-from .. import config
+import config
 
 
 # === LOGGER SETUP ===

@@ -1,7 +1,8 @@
 import mysql.connector
+from config import DBCONFIG
 
-EmilsSchedulerDB = mysql.connector.connect(host='localhost',user='root',password='0popcorn0',database='EmilsSchedulerDB');
-cursor = EmilsSchedulerDB.cursor()
+DBConn = mysql.connector.connect(**DBCONFIG);
+cursor = DBConn.cursor()
 
 def run_recipient_program():
     print('='*60)
@@ -33,7 +34,7 @@ def run_recipient_program():
 
         try:
             cursor.execute(sql, (name,email,phone))
-            EmilsSchedulerDB.commit()
+            DBConn.commit()
         except Exception as err:
             print(err)
 
@@ -47,7 +48,7 @@ def run_recipient_program():
 
         try:
             cursor.execute(sql, (id))
-            EmilsSchedulerDB.commit()
+            DBConn.commit()
         except Exception as err:
             (print(err))
 

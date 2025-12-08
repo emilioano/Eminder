@@ -8,7 +8,7 @@ Instead of one large utils.py, we split into:
 """
 
 # Import from submodules to maintain backward compatibility
-from Eminder.modules.logger import log, debug, info, warning, error
+from modules.logger import log, debug, info, warning, error
 #from emilflow.utils.formatting import format_number, format_currency, format_percentage
 
 # Export public API

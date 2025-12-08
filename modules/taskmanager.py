@@ -1,14 +1,18 @@
 import mysql.connector
 import json
 import datetime
-from emilflow.modules import log
+from modules import log
 
-EmilsSchedulerDB = mysql.connector.connect(host='localhost',user='root',password='0popcorn0',database='EmilsSchedulerDB');
-cursor = EmilsSchedulerDB.cursor()
-
+from config import DBCONFIG
 
 
-def run_recipient_program():
+
+DBConn = mysql.connector.connect(**DBCONFIG);
+cursor = DBConn.cursor()
+
+
+
+def run_task_manager():
 
     selection = 0
 
@@ -123,7 +127,7 @@ def run_recipient_program():
 
             try:
                 cursor.execute(sql, (message,dailyquote,dailyweather,json.dumps(schedule),channel,location,date_time))
-                EmilsSchedulerDB.commit()
+                DBConn.commit()
                 print('Post saved!')
 
                 return
@@ -142,7 +146,7 @@ def run_recipient_program():
 
             try:
                 cursor.execute(sql, (taskid,))
-                EmilsSchedulerDB.commit()
+                DBConn.commit()
                 return
 
             except Exception as err:
@@ -155,4 +159,4 @@ def run_recipient_program():
 
 
 
-run_recipient_program()
+run_task_manager()
