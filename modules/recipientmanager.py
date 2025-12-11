@@ -1,10 +1,11 @@
 import mysql.connector
 from config import DBCONFIG
+from modules.logger import log,debug,info,warning,error,critical
 
 DBConn = mysql.connector.connect(**DBCONFIG);
 cursor = DBConn.cursor()
 
-def run_recipient_program():
+def run_recipient_program(TaskId=None):
     print('='*60)
     print('Make a selection.')
     print('1. View records in DB.')
@@ -16,11 +17,13 @@ def run_recipient_program():
 
     if selection == 1:
         print('Showing records')
+    
         cursor.execute('SELECT * FROM Recipients')
 
         result = cursor.fetchall()
 
-        print (result)
+        for row in result:
+            log(row)
 
 
     if selection == 2:
@@ -32,9 +35,21 @@ def run_recipient_program():
 
         sql = 'INSERT INTO Recipients(Name,Email,Phone) VALUES (%s,%s,%s);'
 
+
+
+
         try:
             cursor.execute(sql, (name,email,phone))
+            saved_id = cursor.lastrowid
             DBConn.commit()
+            
+
+            if TaskId:
+                sql2 = 'INSERT INTO TaskRecipients(Taskid,RecipientId) VALUES (%s,%s);'
+                cursor.execute(sql2, (TaskId,saved_id))
+                DBConn.commit()
+
+
         except Exception as err:
             print(err)
 
@@ -57,5 +72,5 @@ def run_recipient_program():
 
 
 
-
-run_recipient_program()
+if __name__ == '__main__':
+    run_recipient_program()

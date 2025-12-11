@@ -1,7 +1,8 @@
 import mysql.connector
 import json
 import datetime
-from modules import log
+from modules.logger import log,debug,info,warning,error,critical
+from modules import recipientmanager
 
 from config import DBCONFIG
 
@@ -11,10 +12,11 @@ DBConn = mysql.connector.connect(**DBCONFIG);
 cursor = DBConn.cursor()
 
 
-
 def run_task_manager():
 
     selection = 0
+
+    saved_id = None
 
     while selection < 999:
         if selection == 0:
@@ -23,20 +25,22 @@ def run_task_manager():
             print('1. View records in DB.')
             print('2. Enter a new record into DB')
             print('3. Remove a record from DB')
+            print('4. Connect an existing recipient to a task.')
             print('0. Quit')
             selection = int(input())
             print('='*60)
 
 
         if selection == 1:
-            print('Showing records')
             
             try:
-                cursor.execute('SELECT * FROM Tasks')
+                cursor.execute('SELECT * FROM Tasks ORDER By TaskId ASC')
                 result = cursor.fetchall()
 
-                log(result)
-                #print(result)
+                log('Listing records in Task table:')
+                for row in result:
+                    log(row)
+                    #print(result)
 
                 return
 
@@ -62,7 +66,7 @@ def run_task_manager():
                 schedule = {
                     'type': 'once',
                     'time': dateandtime,
-                    'timezone': 'Europe/Stockholm'
+                    'timezone': 'CET'
                 }
 
             elif scheduleinput == 2:
@@ -71,7 +75,7 @@ def run_task_manager():
                 schedule = {
                     'type': 'daily' , 
                     'time': time,
-                    'timezone': 'Europe/Stockholm'
+                    'timezone': 'CET'
                 }    
 
             elif scheduleinput == 3:
@@ -82,7 +86,7 @@ def run_task_manager():
                     'type': 'weekly',
                     'days': days,
                     'time': time,
-                    'timezone': 'Europe/Stockholm'
+                    'timezone': 'CET'
                 }            
 
             elif scheduleinput == 4:
@@ -93,7 +97,7 @@ def run_task_manager():
                     'type': 'monthly',
                     'days': days,
                     'time': time,
-                    'timezone': 'Europe/Stockholm'
+                    'timezone': 'CET'
                 }   
 
             elif scheduleinput == 5:
@@ -104,7 +108,7 @@ def run_task_manager():
                     'type': 'interval',
                     'interval': interval,
                     'time': time,
-                    'timezone': 'Europe/Stockholm'
+                    'timezone': 'CET'
                 }   
 
 
@@ -118,6 +122,9 @@ def run_task_manager():
 
             message = str(input('The message to be sent (max 3000 characters):'))
 
+            
+
+
             now_str = str(datetime.datetime.now())
             date_time = (now_str.split('.')[0])
 
@@ -128,12 +135,19 @@ def run_task_manager():
             try:
                 cursor.execute(sql, (message,dailyquote,dailyweather,json.dumps(schedule),channel,location,date_time))
                 DBConn.commit()
-                print('Post saved!')
+                saved_id = cursor.lastrowid
+                log(f'TaskId {saved_id} has been saved! Message: {message}. Schedule: {json.dumps(schedule)}.')
 
-                return
+                recipient_question = str(input('Recipients (1. Add new. 2. Add recipient from existing): '))
+                if recipient_question == str(1):
+                    recipientmanager.run_recipient_program(saved_id)
+                if recipient_question == str(2):
+                    selection = 4
+                
+                continue
 
             except Exception as err:
-                print(err)
+                error(err)
 
                 return
 
@@ -147,16 +161,52 @@ def run_task_manager():
             try:
                 cursor.execute(sql, (taskid,))
                 DBConn.commit()
+                log(f'Removed Taskid {taskid} from DB.')
                 return
 
             except Exception as err:
-                (print(err))
+                error(err)
                 return
+
+
+        if selection == 4:
+
+            sql = 'INSERT INTO TaskRecipients(TaskId,RecipientId) VALUES (%s,%s);'
+
+            print('1. Show all saved recipients. 2. Enter Id')
+            question = str(input(''))
+
+            if question == str(1):
+                cursor.execute('SELECT * FROM Recipients')
+
+                log('Listing all recipients:')
+                result = cursor.fetchall()
+
+                for row in result:
+                    log(row)
+            
+            if saved_id:
+                recipient_id = input(f'Enter the RecipientId to connect to TaskId {saved_id}.')
+            
+            else:
+                saved_id = input('Enter the TaskId.')
+                recipient_id = input(f'Enter the RecipientId to connect to TaskId {saved_id}.')
+
+            try:
+                cursor.execute(sql, (saved_id,recipient_id))
+                DBConn.commit()
+                log(f'TaskId {saved_id} has been connected to RecipientId {recipient_id}.')
+                return
+            except Exception as err:
+                error(err)
+                return
+
+                
 
 
         selection = 1000 if selection == 0 else 1
 
 
 
-
-run_task_manager()
+if __name__ == '__main__':
+    run_task_manager()
