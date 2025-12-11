@@ -41,6 +41,15 @@ def event_trigger():
         row = cursor.fetchall()   
 
         for row in row:
+
+            def Messageout():
+                # Send to message_out!!
+                if channel == 1:
+                    mail_out.gmail_send_message(recipient_email,mail_subject,task_message)  
+                elif channel == 3:
+                    mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
+
+
             if (row.get('Active')) == 1:
                 #print(f'{row.get("Schedule")}.')
 
@@ -80,7 +89,7 @@ def event_trigger():
                 #print(f'Scheduled time: {trigger_dt}')
                 #print(schedule)
                 print(f'RecipientId: {recipient_id}. Recipient name: {recipient_name}. Recipient e-mail: {recipient_email}. Recipient_phone: {recipient_phone}.')
-                print(f'Message: {task_message}.')
+                print(f'Message: {task_message}')
 
                 #yesterday_dt = datetime.datetime.now() - datetime.timedelta(days=1)
                 #yesterday = yesterday_dt.strftime('%Y-%m-%d')
@@ -100,12 +109,9 @@ def event_trigger():
                     if trigger_dt <= date_time and last_triggered is None:
                         print('Trigger hit!!')
 
-                        # Send to message_out!!
-                        if channel == 1:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
-                        elif channel == 3:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
-                        log(f'')
+                        # Sending message and monitoring the operation time!
+                        start_time, finish_time, operation_time = performance.timed_operation(Messageout)
+                        log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
 
 
                         insert_last_triggered = 'UPDATE Tasks SET Lasttriggered = %s WHERE Taskid = %s;'
@@ -119,11 +125,9 @@ def event_trigger():
                     if (trigger_dt <= date_time.time()) and (last_triggered is None or last_triggered.date() < today):
 
                         print('Trigger hit!!')
-                        # Send to message_out!!
-                        if channel == 1:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
-                        elif channel == 3:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
+                        # Sending message and monitoring the operation time!
+                        start_time, finish_time, operation_time = performance.timed_operation(Messageout)
+                        log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
 
 
                         insert_last_triggered = 'UPDATE Tasks SET Lasttriggered = %s WHERE Taskid = %s;'
@@ -149,11 +153,9 @@ def event_trigger():
                     if (current_weekday == trigger_days) and (trigger_dt <= date_time.time()) and (last_triggered is None or last_triggered.date() < today):
                         print('Trigger hit!!')
 
-                        # Send to message_out!!
-                        if channel == 1:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
-                        elif channel == 3:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
+                        # Sending message and monitoring the operation time!
+                        start_time, finish_time, operation_time = performance.timed_operation(Messageout)
+                        log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
 
                         insert_last_triggered = 'UPDATE Tasks SET Lasttriggered = %s WHERE Taskid = %s;'
                         cursor.execute(insert_last_triggered, (date_time,taskid))
@@ -192,11 +194,9 @@ def event_trigger():
                     if (day in trigger_days) and (trigger_dt <= date_time.time()) and (last_triggered is None or last_triggered.date() < today):
                         print('Trigger hit!!')
 
-                        # Send to message_out!!
-                        if channel == 1:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
-                        elif channel == 3:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
+                        # Sending message and monitoring the operation time!
+                        start_time, finish_time, operation_time = performance.timed_operation(Messageout)
+                        log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
 
                         insert_last_triggered = 'UPDATE Tasks SET Lasttriggered = %s WHERE Taskid = %s;'
                         cursor.execute(insert_last_triggered, (date_time,taskid))
@@ -222,11 +222,9 @@ def event_trigger():
                     #if trigger_dt <= date_time and last_triggered is None:
                         print('Trigger hit!!')
 
-                        # Send to message_out!!
-                        if channel == 1:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
-                        elif channel == 3:
-                            mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
+                        # Sending message and monitoring the operation time!
+                        start_time, finish_time, operation_time = performance.timed_operation(Messageout)
+                        log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
 
                         insert_last_triggered = 'UPDATE Tasks SET Lasttriggered = %s WHERE Taskid = %s;'
                         cursor.execute(insert_last_triggered, (date_time,taskid))

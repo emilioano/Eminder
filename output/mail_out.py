@@ -43,7 +43,7 @@ def gmail_send_message(to='emil.sjoekvist@gmail.com', subject='Hej', content='Et
         .send(userId="me", body=create_message)
         .execute()
     )
-    log(f'Message Id: {send_message["id"]}')
+    log(f'E-mail with Id: {send_message["id"]} has been sent to {to}.')
   except HttpError as err:
     error(f"An error occurred: {err}")
     send_message = None
