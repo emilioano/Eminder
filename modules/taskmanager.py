@@ -1,8 +1,10 @@
 import mysql.connector
 import json
 import datetime
+import re
 from modules.logger import log,debug,info,warning,error,critical
-from modules import recipientmanager
+from modules import recipientmanager, aimanager
+
 
 from config import DBCONFIG
 
@@ -24,8 +26,9 @@ def run_task_manager():
             print('Make a selection.')
             print('1. View records in DB.')
             print('2. Enter a new record into DB')
-            print('3. Remove a record from DB')
-            print('4. Connect an existing recipient to a task.')
+            print('3. Use AI to make a schedule.')
+            print('4. Remove a record from DB')
+            print('5. Connect an existing recipient to a task.')
             print('0. Quit')
             selection = int(input())
             print('='*60)
@@ -128,12 +131,12 @@ def run_task_manager():
             now_str = str(datetime.datetime.now())
             date_time = (now_str.split('.')[0])
 
-            sql = 'INSERT INTO Tasks(Message,Dailyquote,Dailyweather,Schedule,Channel,Location,Createdtime) VALUES (%s,%s,%s,%s,%s,%s,%s);'
+            sql = 'INSERT INTO Tasks(Subject,Message,Dailyquote,Dailyweather,Schedule,Channel,Location,Createdtime) VALUES (%s,%s,%s,%s,%s,%s,%s,%s);'
 
 
 
             try:
-                cursor.execute(sql, (message,dailyquote,dailyweather,json.dumps(schedule),channel,location,date_time))
+                cursor.execute(sql, ("Alert from Eminder",message,dailyquote,dailyweather,json.dumps(schedule),channel,location,date_time))
                 DBConn.commit()
                 saved_id = cursor.lastrowid
                 log(f'TaskId {saved_id} has been saved! Message: {message}. Schedule: {json.dumps(schedule)}.')
@@ -142,7 +145,7 @@ def run_task_manager():
                 if recipient_question == str(1):
                     recipientmanager.run_recipient_program(saved_id)
                 if recipient_question == str(2):
-                    selection = 4
+                    selection = 5
                 
                 continue
 
@@ -151,7 +154,56 @@ def run_task_manager():
 
                 return
 
+
         if selection == 3:
+            print("Describe what you want to schedualize!")
+
+            prompt = input()
+
+            airesponse = aimanager.AIprompt(prompt)
+
+            # Sometimes the AI LLM returns some scrap characters shit even I asked specifically not to. Using regex to clean.
+            airesponse_regex = re.sub(r"```(?:json)?", "", airesponse).strip()
+
+            jsonresponse = json.loads(airesponse_regex)
+            answers = jsonresponse["answers"]
+
+
+
+
+            savepost = input('Do you want to save this record(s)? Y/N')
+
+            if savepost == "Y":
+                now_str = str(datetime.datetime.now())
+                date_time = (now_str.split('.')[0])
+                sql = 'INSERT INTO Tasks(Subject,Message,Dailyquote,Dailyweather,Schedule,Channel,Location,Createdtime) VALUES (%s,%s,%s,%s,%s,%s,%s,%s);'
+
+
+                for answer in answers:
+                    subject = answer["Subject"]
+                    text = answer["Message"]
+                    schedule = answer["schedule"]
+                
+
+                    try:
+                        cursor.execute(sql, (subject,text,'0','0',json.dumps(schedule),'1','',date_time))
+                        DBConn.commit()
+                        saved_id = cursor.lastrowid
+
+                        log(f'TaskId {saved_id} has been saved! Message: {answer["Message"]}. Schedule: {answer["schedule"]}.')
+
+                        recipient_question = str(input('Recipients (1. Add new. 2. Add recipient from existing): '))
+                        if recipient_question == str(1):
+                            recipientmanager.run_recipient_program(saved_id)
+                        if recipient_question == str(2):
+                            selection = 5
+
+
+                    except Exception as err:
+                        error(err)
+
+
+        if selection == 4:
             print('Enter the Taskid for the record to remove')
 
             taskid = input('Taskid: ')
@@ -169,7 +221,7 @@ def run_task_manager():
                 return
 
 
-        if selection == 4:
+        if selection == 5:
 
             sql = 'INSERT INTO TaskRecipients(TaskId,RecipientId) VALUES (%s,%s);'
 

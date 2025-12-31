@@ -20,7 +20,7 @@ def gmail_send_message(to='emil.sjoekvist@gmail.com', subject='Hej', content='Et
   TODO(developer) - See https://developers.google.com/identity
   for guides on implementing OAuth2 for the application.
   """
-  #creds, _ = google.auth.default()
+
 
   try:
     service = build("gmail", "v1", credentials=GOOGLECRED)

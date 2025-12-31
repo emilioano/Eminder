@@ -71,7 +71,10 @@ def event_trigger():
                 recipient_email = row.get('Email')
                 recipient_phone = row.get('Phone')
 
-                mail_subject = f'Alert from Eminder to {recipient_name}!'
+                
+                mail_subject = row.get('Subject') 
+                if mail_subject is None:
+                    mail_subject = f'Alert from Eminder to {recipient_name}!'
 
                 # Apply different datetime logic depending on the Schedule Type.
                 # If type 'once' we check both date and time, else only time, date will be checked separately.
@@ -89,6 +92,8 @@ def event_trigger():
                 #print(f'Scheduled time: {trigger_dt}')
                 #print(schedule)
                 print(f'RecipientId: {recipient_id}. Recipient name: {recipient_name}. Recipient e-mail: {recipient_email}. Recipient_phone: {recipient_phone}.')
+                if mail_subject is not None:
+                    print(f'Subject: {mail_subject}')
                 print(f'Message: {task_message}')
 
                 #yesterday_dt = datetime.datetime.now() - datetime.timedelta(days=1)
