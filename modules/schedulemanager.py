@@ -4,7 +4,7 @@ import datetime
 
 from modules.logger import log,debug,info,warning,error,critical
 from config import DBCONFIG,colors
-from output import mail_out, discord_out
+from output import mail_out, discord_out, reports
 from analysis import performance
 
 
@@ -69,12 +69,13 @@ def event_trigger():
                 channel = row.get('Channel')
 
 
-                task_message = '[ This is an alert from Eminder triggered at ' + schedule_type + ' ' + trigger_time + '. Recipient: ' + recipient_name + ' ] ' + row.get('Message')
                 recipient_id = row.get('RecipientId')
                 recipient_name = row.get('Name')
                 recipient_email = row.get('Email')
                 recipient_phone = row.get('Phone')
                 recipient_discordhook = row.get('DiscordHook')
+
+                task_message = '[ This is an alert from Eminder triggered at ' + schedule_type + ' ' + trigger_time + '. Recipient: ' + recipient_name + ' ] ' + row.get('Message')
 
                 
                 mail_subject = row.get('Subject') 
