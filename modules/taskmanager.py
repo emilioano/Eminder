@@ -116,12 +116,12 @@ def run_task_manager():
 
 
             channel = int(input('Channels to use (1. E-mail. 2. Discord bot. 3. All): '))
-            dailyquote = str(input('Include a daily quote (Y/N): '))
-            dailyquote = 1 if dailyquote == 'Y' else 0
-            dailyweather = str(input('Include the daily weather (Y/N): '))
-            dailyweather = 1 if dailyweather == 'Y' else 0
+            #dailyquote = str(input('Include a daily quote (Y/N): '))
+            #dailyquote = 1 if dailyquote == 'Y' else 0
+            #dailyweather = str(input('Include the daily weather (Y/N): '))
+            #dailyweather = 1 if dailyweather == 'Y' else 0
             #if dailyweather == 'Y':
-            location = input('Enter weather location: ') if dailyweather == 1 else 0
+            #location = input('Enter weather location: ') if dailyweather == 1 else 0
 
             message = str(input('The message to be sent (max 3000 characters):'))
 
@@ -157,8 +157,8 @@ def run_task_manager():
 
         if selection == 3:
             print("Describe what you want to schedualize!")
-
             prompt = input()
+            channel = int(input('Channels to use (1. E-mail. 2. Discord bot. 3. All): '))
 
             airesponse = aimanager.AIprompt(prompt)
 
@@ -186,7 +186,7 @@ def run_task_manager():
                 
 
                     try:
-                        cursor.execute(sql, (subject,text,'0','0',json.dumps(schedule),'1','',date_time))
+                        cursor.execute(sql, (subject,text,'0','0',json.dumps(schedule),channel,'',date_time))
                         DBConn.commit()
                         saved_id = cursor.lastrowid
 
