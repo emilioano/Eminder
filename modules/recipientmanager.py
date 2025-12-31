@@ -40,7 +40,7 @@ def run_recipient_program(TaskId=None):
 
 
         try:
-            cursor.execute(sql, (name,email,phone))
+            cursor.execute(sql, (name,email,phone,discord_webhhok))
             saved_id = cursor.lastrowid
             DBConn.commit()
             
