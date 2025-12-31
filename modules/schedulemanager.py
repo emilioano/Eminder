@@ -4,7 +4,7 @@ import datetime
 
 from modules.logger import log,debug,info,warning,error,critical
 from config import DBCONFIG,colors
-from output import mail_out,reports
+from output import mail_out, discord_out
 from analysis import performance
 
 
@@ -46,9 +46,12 @@ def event_trigger():
             def Messageout():
                 # Send to message_out!!
                 if channel == 1:
-                    mail_out.gmail_send_message(recipient_email,mail_subject,task_message)  
+                    mail_out.gmail_send_message(recipient_email,mail_subject,task_message) 
+                elif channel == 3:
+                    discord_out.discord_send_message(recipient_discordhook, mail_subject + ': ' + task_message)
                 elif channel == 3:
                     mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
+                    discord_out.discord_send_message(recipient_discordhook, mail_subject + ': ' + task_message)
 
 
             if (row.get('Active')) == 1:
@@ -66,11 +69,12 @@ def event_trigger():
                 channel = row.get('Channel')
 
 
-                task_message = row.get('Message')
+                task_message = 'Alert from Eminder at' + trigger_time + '. ' + row.get('Message')
                 recipient_id = row.get('RecipientId')
                 recipient_name = row.get('Name')
                 recipient_email = row.get('Email')
                 recipient_phone = row.get('Phone')
+                recipient_discordhook = row.get('DiscordHook')
 
                 
                 mail_subject = row.get('Subject') 

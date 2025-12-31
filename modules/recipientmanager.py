@@ -31,15 +31,16 @@ def run_recipient_program(TaskId=None):
 
         name = str(input('Name: '))
         email = str(input('Email: '))
-        phone = str(input('Phone #: '))
+        phone = str(input('Phone # (optional): '))
+        discord_webhhok = str(input('Discord Webhook (optional): '))
 
-        sql = 'INSERT INTO Recipients(Name,Email,Phone) VALUES (%s,%s,%s);'
+        sql = 'INSERT INTO Recipients(Name,Email,Phone,DiscordHook) VALUES (%s,%s,%s,%s);'
 
 
 
 
         try:
-            cursor.execute(sql, (name,email,phone))
+            cursor.execute(sql, (name,email,phone,discord_webhhok))
             saved_id = cursor.lastrowid
             DBConn.commit()
             
