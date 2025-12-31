@@ -47,7 +47,7 @@ def _setup_logger():
     console_handler.setLevel(logging.INFO)  # Only INFO and above to console
 
     # Simple format for console (no timestamps, cleaner output)
-    console_format = logging.Formatter('[Eminder] %(asctime)s: %(message)s')
+    console_format = logging.Formatter('[Eminder    ] %(asctime)s: %(message)s')
     console_handler.setFormatter(console_format)
 
     logger.addHandler(console_handler)
