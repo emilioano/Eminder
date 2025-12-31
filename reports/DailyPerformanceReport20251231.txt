@@ -1,0 +1,20 @@
+====================================================================================================
+Daily Performance Report
+Generated: 2025-12-31 19:46:31.026606.
+Horizon: Today.
+====================================================================================================
+
+
+Operation record count: 1752.
+Average operation time: 0.10 s.
+
+
+Operation types:
+ {'Schedulerjob', 'job', 'DailyReportJob', 'Messageout', 'ReportJob'}.
+
+
+Schedulerjob
+job
+DailyReportJob
+Messageout
+ReportJob

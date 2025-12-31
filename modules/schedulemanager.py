@@ -9,6 +9,7 @@ from analysis import performance
 
 
 
+
 #print(os.getcwd())
 
 def event_trigger():
@@ -241,6 +242,9 @@ def event_trigger():
                         log(f'Last triggered updated to {date_time} On TaskId {taskid}.')              
 
     start_time, finish_time, operation_time = performance.timed_operation(Schedulerjob)
+
+    performance.timed_operation(reports.DailyReportJob)
+
     print(f'{colors.WARNING}')
     print('Performance monitor!')
     print(f'Start time: {start_time.strftime("%H:%M:%S")}. Finish time: {finish_time.strftime("%H:%M:%S")}')
