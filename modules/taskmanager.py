@@ -115,7 +115,7 @@ def run_task_manager():
                 }   
 
 
-            channel = int(input('Channels to use (1. E-mail. 2. Text message. 3. All): '))
+            channel = int(input('Channels to use (1. E-mail. 2. Discord bot. 3. All): '))
             dailyquote = str(input('Include a daily quote (Y/N): '))
             dailyquote = 1 if dailyquote == 'Y' else 0
             dailyweather = str(input('Include the daily weather (Y/N): '))
@@ -201,6 +201,8 @@ def run_task_manager():
 
                     except Exception as err:
                         error(err)
+            else:
+                selection = 3
 
 
         if selection == 4:

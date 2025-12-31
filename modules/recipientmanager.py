@@ -31,9 +31,10 @@ def run_recipient_program(TaskId=None):
 
         name = str(input('Name: '))
         email = str(input('Email: '))
-        phone = str(input('Phone #: '))
+        phone = str(input('Phone # (optional): '))
+        discord_webhhok = str(input('Discord Webhook (optional): '))
 
-        sql = 'INSERT INTO Recipients(Name,Email,Phone) VALUES (%s,%s,%s);'
+        sql = 'INSERT INTO Recipients(Name,Email,Phone,DiscordHook) VALUES (%s,%s,%s,%s);'
 
 
 
