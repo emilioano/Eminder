@@ -47,11 +47,11 @@ def event_trigger():
                 # Send to message_out!!
                 if channel == 1:
                     mail_out.gmail_send_message(recipient_email,mail_subject,task_message) 
-                elif channel == 3:
-                    discord_out.discord_send_message(recipient_discordhook, mail_subject + ': ' + task_message)
+                elif channel == 2:
+                    discord_out.discord_send_message(recipient_discordhook, mail_subject + '. ' + task_message)
                 elif channel == 3:
                     mail_out.gmail_send_message(recipient_email,mail_subject,task_message)
-                    discord_out.discord_send_message(recipient_discordhook, mail_subject + ': ' + task_message)
+                    discord_out.discord_send_message(recipient_discordhook, mail_subject + '. ' + task_message)
 
 
             if (row.get('Active')) == 1:
@@ -69,7 +69,7 @@ def event_trigger():
                 channel = row.get('Channel')
 
 
-                task_message = 'Alert from Eminder at' + trigger_time + '. ' + row.get('Message')
+                task_message = '[ This is an alert from Eminder triggered at ' + schedule_type + ' ' + trigger_time + '. Recipient: ' + recipient_name + ' ] ' + row.get('Message')
                 recipient_id = row.get('RecipientId')
                 recipient_name = row.get('Name')
                 recipient_email = row.get('Email')
@@ -96,7 +96,7 @@ def event_trigger():
                 #print(f'Schedule type: {schedule_type}')
                 #print(f'Scheduled time: {trigger_dt}')
                 #print(schedule)
-                print(f'RecipientId: {recipient_id}. Recipient name: {recipient_name}. Recipient e-mail: {recipient_email}. Recipient_phone: {recipient_phone}.')
+                print(f'RecipientId: {recipient_id}. Recipient name: {recipient_name}. Recipient e-mail: {recipient_email}. Recipient_phone: {recipient_phone}. Channel: {channel}')
                 if mail_subject is not None:
                     print(f'Subject: {mail_subject}')
                 print(f'Message: {task_message}')
@@ -193,7 +193,7 @@ def event_trigger():
 
                     day = days_map[current_weekday]
 
-                    print(f'Idag med tre bokstäver: {day}')
+                    print(f'Today with three letters: {day}')
 
                     print(f'Trigger time: {trigger_dt}. Now time: {date_time}')
 
@@ -224,7 +224,7 @@ def event_trigger():
 
                     next_trigger = datetime.datetime.combine(next_trigger_day, trigger_dt)
 
-                    print(f'Försöka få ihop datum och tid {next_trigger_day} {trigger_time}')
+                    print(f'Trying to put together date and time: {next_trigger_day} {trigger_time}')
                     print(f'Trigger time: {next_trigger}. Now time: {date_time}')
 
 
