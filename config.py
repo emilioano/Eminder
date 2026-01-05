@@ -53,6 +53,8 @@ client_secret = os.getenv('client_secret'),
 scopes = [os.getenv('scopes')]
 )
 
+DISCORD_WEBHOOK_ADMIN = os.getenv('discord_webhook')
+
 
 # === TEXT COLORS ===
 class colors:
