@@ -1,10 +1,12 @@
 import datetime
+from time import time
 import mysql.connector
 from pathlib import Path
 
 from config import DBCONFIG,PROJECT_ROOT
 from modules.logger import log,debug,info,warning,error,critical
 from analysis import performance 
+from modules import dbactions
 
 
 def create_report(report_name='Performance report',horizon='Today'):
@@ -28,39 +30,37 @@ def create_report(report_name='Performance report',horizon='Today'):
         horizon = ''
     
 
-    
-    DBConn = mysql.connector.connect(**DBCONFIG);
-    cursor = DBConn.cursor(dictionary=True)
-
-
-
-
-    cursor.execute(f'''
-    SELECT 
-    p.Id,
-    p.Operation,
-    p.Starttime,
-    p.Finishtime,
-    SUM(p.Finishtime - p.Starttime) as Operationtime
-    FROM Performance as p
-    WHERE Starttime LIKE "{horizon}%"
-    GROUP BY Id
-    Order by Id DESC
-    ;
-    ''')
-
-    row = cursor.fetchall()
+    row = dbactions.fetchperformancerecords(horizon)
 
     recordcount = 0
     operationtime = []
     operationtypes = []
 
-    for row in row:
-        recordcount+=1
-        operationtime.append(row.get('Operationtime'))
-        operationtypes.append(row.get('Operation'))
-        uniqueoperationtypes = set(operationtypes)
+    operations = []
 
+    time_per_operation = 0
+
+
+
+    for row in row:
+        try:
+            recordcount+=1
+            operationid = row.get('Id')
+            operationtime.append(row.get('Operationtime'))
+            operationtypes.append(row.get('Operation'))
+            uniqueoperationtypes = set(operationtypes)
+
+            operations.append({
+                'id':operationid,
+                'recordnumber':recordcount,
+                'operation':row.get('Operation'),
+                'time':row.get('Operationtime')
+                })
+
+
+        except Exception as err:
+            error(err)
+            break
 
     averagetime = sum(operationtime)/recordcount
     #ageragetimeperoperationtype = 
@@ -72,10 +72,29 @@ def create_report(report_name='Performance report',horizon='Today'):
     lines.append(f'Operation types:\n {uniqueoperationtypes}.')
     lines.append(f'\n')
 
-    for i in uniqueoperationtypes:
-        lines.append(i)
-        lines.append
+    lines.append(f'Performance per operation:')
 
+    for i in uniqueoperationtypes:
+        try:
+            lines.append(i)
+            times = [op["time"] for op in operations if op["operation"] == i]
+            time_per_operation = sum(times)
+            count_per_operation = len(times)
+            average_per_operation = time_per_operation / len(times)
+            max_per_operation = max(times)
+            min_per_operation = min(times)
+
+            lines.append(f'     Count: {count_per_operation}.')
+            lines.append(f'     Total time spent: {str(time_per_operation)} s')
+            lines.append(f'     Average time: {average_per_operation:.2f} s.')
+            lines.append(f'     Max time: {max_per_operation:.2f} s.')
+            lines.append(f'     Min time: {min_per_operation:.2f} s.')
+            lines.append(f'\n')
+
+            
+        except Exception as err:
+            error(err)
+            break
 
     return '\n'.join(lines)
 
@@ -94,7 +113,7 @@ def save_report_to_file(reportcontent=None, filename=None):
         f.write(reportcontent)
 
 
-def DailyReportJob():
+def dailyreportjob():
     content = create_report(report_name='Daily Performance Report', horizon='Today')
     save_report_to_file(content, filename='DailyPerformanceReport')
 
@@ -108,6 +127,6 @@ if __name__ == '__main__':
     #start_time, finish_time, operation_time = performance.timed_operation(save_report_to_file(create_report(), filename='DailyPerformanceReport'))
 
 
-    start_time, finish_time, operation_time = performance.timed_operation(DailyReportJob)
+    start_time, finish_time, operation_time = performance.timed_operation(dailyreportjob)
     print(f'Start time: {start_time.strftime("%H:%M:%S")}. Finish time: {finish_time.strftime("%H:%M:%S")}')
     print(f'Operation time: {operation_time:.2f} seconds.')

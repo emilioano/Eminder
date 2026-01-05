@@ -1,0 +1,353 @@
+2026-01-05 08:36:00 - Eminder - INFO - log:98 - TaskId 128 has been saved!
+ Subject: Hej. 
+Message: Då. 
+Schedule: {"type": "once", "time": "2026-01-07 15:00", "timezone": "CET"}.
+2026-01-05 08:54:24 - Eminder - INFO - log:98 - TaskId 129 has been saved!
+ Subject: Hej. 
+Message: Då. 
+Schedule: {"type": "once", "time": "2026-01-07 12:00", "timezone": "CET"}.
+2026-01-05 08:57:17 - Eminder - INFO - log:98 - TaskId 130 has been saved!
+ Subject: Hej. 
+Message: Da. 
+Schedule: {"type": "once", "time": "2026-01-06 12:20", "timezone": "CET"}.
+2026-01-05 09:15:32 - Eminder - INFO - log:98 - E-mail with Id: 19b8d39c03555d8a has been sent to emil.sjokvist@gmail.com.
+2026-01-05 09:15:32 - Eminder - INFO - log:98 - Operation time: 1.97s. Start time: 2026-01-05 09:15:30.479701. Finish time 2026-01-05 09:15:32.445587.
+2026-01-05 09:25:26 - Eminder - INFO - log:98 - E-mail with Id: 19b8d42d0ae3d8db has been sent to emil.sjokvist@gmail.com.
+2026-01-05 09:25:26 - Eminder - INFO - log:98 - Operation time: 2.21s. Start time: 2026-01-05 09:25:24.117725. Finish time 2026-01-05 09:25:26.324862.
+2026-01-05 09:25:26 - Eminder - INFO - log:98 - Last triggered updated to 2026-01-05 09:25:24.093377 On TaskId 35.
+2026-01-05 09:25:27 - Eminder - INFO - log:98 - E-mail with Id: 19b8d42d742aaf45 has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 09:25:27 - Eminder - INFO - log:98 - Operation time: 1.27s. Start time: 2026-01-05 09:25:26.411151. Finish time 2026-01-05 09:25:27.679287.
+2026-01-05 09:25:27 - Eminder - INFO - log:98 - Last triggered updated to 2026-01-05 09:25:24.093377 On TaskId 110.
+2026-01-05 09:25:28 - Eminder - INFO - log:98 - E-mail with Id: 19b8d42db32c2029 has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 09:25:28 - Eminder - INFO - log:98 - Operation time: 1.10s. Start time: 2026-01-05 09:25:27.708137. Finish time 2026-01-05 09:25:28.809802.
+2026-01-05 09:25:28 - Eminder - INFO - log:98 - Last triggered updated to 2026-01-05 09:25:24.093377 On TaskId 121.
+2026-01-05 09:29:51 - Eminder - INFO - log:98 - TaskId 131 has been saved in database!
+Subject: Hej. 
+Message: Då. 
+Schedule: {"type": "daily", "time": "09:30", "timezone": "CET"}.
+2026-01-05 09:31:40 - Eminder - INFO - log:98 - TaskId 132 has been saved in database!
+Subject: Hejsan. 
+Message: Jaha. 
+Schedule: {"type": "daily", "time": "09:32", "timezone": "CET"}.
+2026-01-05 09:31:48 - Eminder - INFO - log:98 - TaskId 132 has been connected to RecipientId 1.
+2026-01-05 09:32:07 - Eminder - INFO - log:98 - E-mail with Id: 19b8d48f1201e715 has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 09:32:07 - Eminder - INFO - log:98 - Operation time: 1.73s. Start time: 2026-01-05 09:32:05.838060. Finish time 2026-01-05 09:32:07.569829.
+2026-01-05 09:32:07 - Eminder - INFO - log:98 - Last triggered updated to 2026-01-05 09:32:05.756526 On TaskId 132.
+2026-01-05 10:09:04 - Eminder - INFO - deleterecipient:48 - Record with id 44 was deleted from the Recipients table!
+2026-01-05 10:09:32 - Eminder - INFO - deleterecipient:48 - Record with id 43 was deleted from the Recipients table!
+2026-01-05 10:12:54 - Eminder - INFO - inserttask:74 - TaskId 133 has been saved in database!
+Subject: Hej. 
+Message: Åhå. 
+Schedule: {"type": "daily", "time": "10:13", "timezone": "CET"}.
+2026-01-05 10:23:54 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d78589d1d49d has been sent to emildaiofj@fsdlifjs.com.
+2026-01-05 10:23:54 - Eminder - INFO - Schedulerjob:101 - Operation time: 1.90s. Start time: 2026-01-05 10:23:52.821409. Finish time 2026-01-05 10:23:54.719887.
+2026-01-05 10:23:54 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 10:23:52.745752 On TaskId 83.
+2026-01-05 10:23:55 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d785ec14e01d has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 10:23:55 - Eminder - INFO - Schedulerjob:101 - Operation time: 1.15s. Start time: 2026-01-05 10:23:54.739471. Finish time 2026-01-05 10:23:55.885340.
+2026-01-05 10:23:55 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 10:23:52.745752 On TaskId 105.
+2026-01-05 10:23:57 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d7862cad5917 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:23:57 - Eminder - INFO - Schedulerjob:101 - Operation time: 1.29s. Start time: 2026-01-05 10:23:55.906822. Finish time 2026-01-05 10:23:57.200519.
+2026-01-05 10:23:57 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 10:23:52.745752 On TaskId 105.
+2026-01-05 10:23:58 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d7867bfe6a6c has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:24:55 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d79476bf487b has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:25:24 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d79b8b664f88 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:27:01 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d7b337af4131 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:37:15 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d84902acb94f has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:38:02 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d85489188822 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:38:41 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d85e1d90c426 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:39:17 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d866e3ff7d21 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:39:55 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d8700a687837 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:40:53 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d87e2427e237 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:42:28 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d895648e0efc has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:42:45 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d899955fc18e has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:43:28 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d8a445b2a728 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:48:45 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d8f165b9bc16 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:48:45 - Eminder - ERROR - discord_send_message:12 - Message is sent to admin to check as the recipients webhook is not properly setup! https://discord.com/api/webhooks/1455953105819799729/DJeIBLrw4NGsHqNpMU4J04cg_GAE0WgVwShFbhjxehqSkNltwMpVSiBhU2ThRx9i5eee.
+2026-01-05 10:50:39 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d90d67b4fc31 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:50:39 - Eminder - ERROR - discord_send_message:12 - Message is sent to admin to check as the recipients webhook is not properly setup! https://discord.com/api/webhooks/1455953105819799729/DJeIBLrw4NGsHqNpMU4J04cg_GAE0WgVwShFbhjxehqSkNltwMpVSiBhU2ThRx9i5eee.
+2026-01-05 10:54:13 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d94192f9cbc0 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 10:54:13 - Eminder - ERROR - discord_send_message:12 - Message is sent to admin to check as the recipients webhook is not properly setup! https://discord.com/api/webhooks/1455953105819799729/DJeIBLrw4NGsHqNpMU4J04cg_GAE0WgVwShFbhjxehqSkNltwMpVSiBhU2ThRx9i5eee.
+2026-01-05 10:54:13 - Eminder - INFO - discord_send_message:27 - Discord message output was triggered in Dry run mode! Message: Message is sent to admin to check as the recipients webhook is not properly setup! https://discord.com/api/webhooks/1455953105819799729/DJeIBLrw4NGsHqNpMU4J04cg_GAE0WgVwShFbhjxehqSkNltwMpVSiBhU2ThRx9i5eee.
+2026-01-05 10:54:13 - Eminder - INFO - Schedulerjob:154 - Operation time: 1.67s. Start time: 2026-01-05 10:54:11.367411. Finish time 2026-01-05 10:54:13.042151.
+2026-01-05 10:54:13 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 10:54:11.308118 On TaskId 107.
+2026-01-05 10:54:14 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d941d3e02a76 has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 10:54:14 - Eminder - INFO - Schedulerjob:101 - Operation time: 1.21s. Start time: 2026-01-05 10:54:13.062679. Finish time 2026-01-05 10:54:14.269837.
+2026-01-05 10:54:14 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 10:54:11.308118 On TaskId 108.
+2026-01-05 10:54:15 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8d9420c7ecb46 has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 10:54:15 - Eminder - INFO - Schedulerjob:101 - Operation time: 1.25s. Start time: 2026-01-05 10:54:14.302870. Finish time 2026-01-05 10:54:15.556372.
+2026-01-05 10:54:15 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 10:54:11.308118 On TaskId 126.
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:17 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:58:45 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:59:05 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 10:59:25 - Eminder - ERROR - create_report:45 - 'tuple' object has no attribute 'get'
+2026-01-05 11:05:38 - Eminder - ERROR - create_report:49 - update expected at most 1 argument, got 2
+2026-01-05 11:06:54 - Eminder - ERROR - create_report:49 - unhashable type: 'list'
+2026-01-05 11:07:51 - Eminder - ERROR - create_report:49 - unhashable type: 'list'
+2026-01-05 11:08:15 - Eminder - ERROR - create_report:49 - unhashable type: 'list'
+2026-01-05 11:11:20 - Eminder - ERROR - create_report:49 - unhashable type: 'list'
+2026-01-05 11:12:16 - Eminder - ERROR - create_report:49 - unhashable type: 'list'
+2026-01-05 11:13:04 - Eminder - ERROR - create_report:49 - unhashable type: 'list'
+2026-01-05 11:24:57 - Eminder - ERROR - create_report:49 - unhashable type: 'dict'
+2026-01-05 11:30:08 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8db4fba82d03c has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 11:30:08 - Eminder - INFO - Schedulerjob:154 - Operation time: 1.74s. Start time: 2026-01-05 11:30:06.525939. Finish time 2026-01-05 11:30:08.264440.
+2026-01-05 11:30:08 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 11:30:06.491096 On TaskId 53.
+2026-01-05 11:30:08 - Eminder - ERROR - create_report:49 - 'builtin_function_or_method' object is not subscriptable
+2026-01-05 13:00:04 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8e075024da704 has been sent to emil.sjokvist@gmail.com.
+2026-01-05 13:00:04 - Eminder - INFO - Schedulerjob:101 - Operation time: 1.73s. Start time: 2026-01-05 13:00:02.533503. Finish time 2026-01-05 13:00:04.259913.
+2026-01-05 13:00:04 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 13:00:02.526946 On TaskId 25.
+2026-01-05 13:00:05 - Eminder - INFO - gmail_send_message:46 - E-mail with Id: 19b8e07548c9541e has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 13:00:05 - Eminder - INFO - Schedulerjob:101 - Operation time: 1.13s. Start time: 2026-01-05 13:00:04.349499. Finish time 2026-01-05 13:00:05.479204.
+2026-01-05 13:00:05 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 13:00:02.526946 On TaskId 122.
+2026-01-05 13:23:32 - Eminder - ERROR - create_report:72 - list indices must be integers or slices, not str
+2026-01-05 13:24:10 - Eminder - ERROR - create_report:72 - list indices must be integers or slices, not str
+2026-01-05 13:24:36 - Eminder - ERROR - create_report:72 - list indices must be integers or slices, not str
+2026-01-05 13:25:35 - Eminder - ERROR - create_report:72 - list indices must be integers or slices, not str
+2026-01-05 13:31:58 - Eminder - ERROR - create_report:77 - list indices must be integers or slices, not str
+2026-01-05 13:34:04 - Eminder - ERROR - create_report:77 - list indices must be integers or slices, not str
+2026-01-05 13:34:54 - Eminder - ERROR - create_report:76 - list indices must be integers or slices, not str
+2026-01-05 13:35:33 - Eminder - ERROR - create_report:76 - list indices must be integers or slices, not str
+2026-01-05 13:42:21 - Eminder - ERROR - create_report:80 - unsupported operand type(s) for +: 'int' and 'str'
+2026-01-05 14:13:12 - Eminder - ERROR - create_report:86 - object of type 'decimal.Decimal' has no len()
+2026-01-05 14:15:44 - Eminder - ERROR - create_report:88 - 'decimal.Decimal' object has no attribute 'count'
+2026-01-05 14:17:15 - Eminder - ERROR - create_report:89 - object of type 'decimal.Decimal' has no len()
+2026-01-05 16:26:49 - Eminder - INFO - inserttask:74 - TaskId 134 has been saved in database!
+Subject: Hajdsa. 
+Message: fsdfdsf. 
+Schedule: {"type": "once", "time": "2026-01-05 16:29", "timezone": "CET"}.
+2026-01-05 16:26:52 - Eminder - INFO - createconnection:98 - TaskId 134 has been connected to RecipientId 1.
+2026-01-05 16:29:02 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hajdsa. Message: fsdfdsf 
+[ This is an alert from Eminder triggered at once 2026-01-05 16:29. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-05 16:31:21 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hej. Message: Ett mail. Recipient: emil.sjoekvist@gmail.com.
+2026-01-05 16:32:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hej. Message: Ett mail. Recipient: emil.sjoekvist@gmail.com.
+2026-01-05 16:32:10 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hej. Message: Ett mail. Recipient: emil.sjoekvist@gmail.com.
+2026-01-05 16:32:18 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hajdsa. Message: fsdfdsf 
+[ This is an alert from Eminder triggered at once 2026-01-05 16:29. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-05 16:32:18 - Eminder - INFO - execute:95 - Operation time: 0.00s. Start time: 2026-01-05 16:32:18.219190. Finish time 2026-01-05 16:32:18.220028.
+2026-01-05 16:32:18 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 16:32:18.158463 On TaskId 134.
+2026-01-05 16:45:20 - Eminder - INFO - inserttask:74 - TaskId 135 has been saved in database!
+Subject: Testar med nya klasser . 
+Message: Fan. 
+Schedule: {"type": "daily", "time": "16:46", "timezone": "CET"}.
+2026-01-05 16:45:24 - Eminder - INFO - createconnection:98 - TaskId 135 has been connected to RecipientId 1.
+2026-01-05 16:46:07 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8ed64730fe3e1 has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 16:46:07 - Eminder - INFO - Schedulerjob:269 - Operation time: 1.78s. Start time: 2026-01-05 16:46:06.065448. Finish time 2026-01-05 16:46:07.842037.
+2026-01-05 16:46:07 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 16:46:05.986046 On TaskId 135.
+2026-01-05 17:03:01 - Eminder - INFO - inserttask:74 - TaskId 136 has been saved in database!
+Subject: Testin testing. 
+Message: Waaaa. 
+Schedule: {"type": "once", "time": "2026-01-05 17:04", "timezone": "CET"}.
+2026-01-05 17:03:06 - Eminder - INFO - createconnection:98 - TaskId 136 has been connected to RecipientId 1.
+2026-01-05 17:04:07 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Testin testing. Message: Waaaa 
+[ This is an alert from Eminder triggered at once 2026-01-05 17:04. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-05 17:07:27 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Testin testing. Message: Waaaa 
+[ This is an alert from Eminder triggered at once 2026-01-05 17:04. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-05 17:07:27 - Eminder - INFO - execute:145 - Operation time: 0.00s. Start time: 2026-01-05 17:07:27.371202. Finish time 2026-01-05 17:07:27.371896.
+2026-01-05 17:07:27 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 17:07:27.289752 On TaskId 136.
+2026-01-05 18:53:58 - Eminder - INFO - inserttask:74 - TaskId 137 has been saved in database!
+Subject: Årligen test. 
+Message: Hej. 
+Schedule: {"type": "yearly", "time": "2026-01-05 18:55", "timezone": "CET"}.
+2026-01-05 18:54:02 - Eminder - INFO - createconnection:98 - TaskId 137 has been connected to RecipientId 1.
+2026-01-05 18:56:01 - Eminder - ERROR - execute:158 - ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-01-05 19:00:08 - Eminder - ERROR - execute:158 - ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-01-05 19:00:32 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8f515c83c6b36 has been sent to emil.sjoekvist@gmail.com.
+2026-01-05 19:00:33 - Eminder - INFO - execute:154 - Operation time: 1.76s. Start time: 2026-01-05 19:00:31.229343. Finish time 2026-01-05 19:00:32.987939.
+2026-01-05 19:00:33 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 19:00:31.148554 On TaskId 137.
+2026-01-05 19:35:10 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8f710f7aa18d1 has been sent to emil.sjoekvist@gmail.com. Message: Hej 
+[ This is an alert from Eminder triggered at yearly 2025-01-05 18:55. Recipient: Emil Sjökvist ] .
+2026-01-05 19:35:10 - Eminder - INFO - execute:158 - Operation time: 1.84s. Start time: 2026-01-05 19:35:08.471214. Finish time 2026-01-05 19:35:10.314215.
+2026-01-05 19:35:10 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 19:35:08.384588 On TaskId 137.
+2026-01-05 19:35:50 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8f71ab483c6b1 has been sent to emil.sjoekvist@gmail.com. Message: Hej 
+[ This is an alert from Eminder triggered at yearly 2025-01-05 18:55. Recipient: Emil Sjökvist ] .
+2026-01-05 19:35:50 - Eminder - INFO - execute:158 - Operation time: 2.14s. Start time: 2026-01-05 19:35:48.060673. Finish time 2026-01-05 19:35:50.204766.
+2026-01-05 19:35:50 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 19:35:47.978389 On TaskId 137.
+2026-01-05 20:02:09 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8f89c6376b791 has been sent to emil.sjoekvist@gmail.com. Message: Hej 
+[ This is an alert from Eminder triggered at yearly 2026-01-05 18:55. Recipient: Emil Sjökvist ] .
+2026-01-05 20:02:09 - Eminder - INFO - execute:157 - Operation time: 1.86s. Start time: 2026-01-05 20:02:08.083148. Finish time 2026-01-05 20:02:09.941397.
+2026-01-05 20:02:09 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 20:02:07.995947 On TaskId 137.
+2026-01-05 20:30:39 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8fa3da7b5ac2f has been sent to emil.sjoekvist@gmail.com. Message: Tonight, before bed, discreetly 'borrow' one sock from every pair in your drawer. Mix them up. Tomorrow's mission: find two matching socks. The struggle will be real, and hilarious for any onlookers (or just you in the mirror). 
+[ This is an alert from Eminder triggered at daily 20:30. Recipient: Emil Sjökvist ] .
+2026-01-05 20:30:39 - Eminder - INFO - execute:160 - Operation time: 1.88s. Start time: 2026-01-05 20:30:37.398654. Finish time 2026-01-05 20:30:39.274671.
+2026-01-05 20:30:39 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 20:30:37.367583 On TaskId 58.
+2026-01-05 20:30:40 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8fa3de9b5a912 has been sent to emil.sjoekvist@gmail.com. Message: Observe a houseplant very closely. Whisper to it about the global conspiracy of sentient garden gnomes. See if it wilts in fear or starts developing new, suspicious growths. Document findings for future comedic reference. 
+[ This is an alert from Eminder triggered at daily 20:30. Recipient: Emil Sjökvist ] .
+2026-01-05 20:30:40 - Eminder - INFO - execute:160 - Operation time: 1.01s. Start time: 2026-01-05 20:30:39.295374. Finish time 2026-01-05 20:30:40.303106.
+2026-01-05 20:30:40 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 20:30:37.367583 On TaskId 59.
+2026-01-05 20:30:41 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8fa3e33e8d8ec has been sent to emil.sjoekvist@gmail.com. Message: For a brief moment, pretend to slip on an invisible banana peel in a public place (or your kitchen, if you're shy). Commit to the bit. The confusion on people's faces (or your pet's) will be priceless. Don't actually fall! 
+[ This is an alert from Eminder triggered at daily 20:30. Recipient: Emil Sjökvist ] .
+2026-01-05 20:30:41 - Eminder - INFO - execute:160 - Operation time: 1.12s. Start time: 2026-01-05 20:30:40.328880. Finish time 2026-01-05 20:30:41.452066.
+2026-01-05 20:30:41 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 20:30:37.367583 On TaskId 60.
+2026-01-05 20:30:42 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b8fa3e7e69df78 has been sent to emil.sjoekvist@gmail.com. Message: Begin your new hobby: collecting spoons. Not fancy ones, just regular, everyday spoons. Declare to anyone who asks (or doesn't) that you're a serious 'domestic utensil curator.' Act very mysterious and profound about your collection. 
+[ This is an alert from Eminder triggered at daily 20:30. Recipient: Emil Sjökvist ] .
+2026-01-05 20:30:42 - Eminder - INFO - execute:160 - Operation time: 1.01s. Start time: 2026-01-05 20:30:41.473775. Finish time 2026-01-05 20:30:42.484464.
+2026-01-05 20:30:42 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 20:30:37.367583 On TaskId 64.
+2026-01-05 20:37:08 - Eminder - INFO - inserttask:74 - TaskId 138 has been saved in database!
+Subject: Mother's Birthday Reminder. 
+Message: It's your mother's birthday today, December 20th! Don't forget to celebrate and wish her a happy birthday. This is a yearly reminder.. 
+Schedule: {"time": "2023-12-20 09:00", "type": "yearly", "timezone": "CET"}.
+2026-01-05 20:37:10 - Eminder - INFO - createconnection:98 - TaskId 138 has been connected to RecipientId 1.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 139 has been saved in database!
+Subject: Morning Wake-Up & First Feed. 
+Message: Wake your son and offer his first milk feed of the day (breast milk or formula, approx. 180-200ml). This ensures he starts his day hydrated and fed.. 
+Schedule: {"time": "07:00", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 140 has been saved in database!
+Subject: Breakfast (Solids). 
+Message: Offer a solid breakfast, such as iron-fortified baby cereal mixed with breast milk/formula, or pureed fruit/vegetable. Start with 2-4 tablespoons and adjust based on appetite. Also, check and change his diaper as needed.. 
+Schedule: {"time": "07:30", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 141 has been saved in database!
+Subject: Morning Playtime & Stimulation. 
+Message: Engage your son in interactive playtime. This is crucial for his cognitive and physical development. Focus on tummy time, crawling practice, exploring safe toys, and reading books. Ensure a clean diaper before play.. 
+Schedule: {"time": "08:00", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 142 has been saved in database!
+Subject: Morning Nap. 
+Message: Put your son down for his first nap. An 8-month-old typically needs 1-1.5 hours for this nap. Ensure a dark, quiet, and safe sleep environment to promote restful sleep.. 
+Schedule: {"time": "09:00", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 143 has been saved in database!
+Subject: Post-Nap Feed & Diaper Change. 
+Message: Upon waking from his morning nap, offer another milk feed (breast milk or formula, approx. 180-200ml). Also, check and change his diaper to keep him comfortable and prevent rashes.. 
+Schedule: {"time": "10:30", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 144 has been saved in database!
+Subject: Lunch (Solids). 
+Message: Offer a solid lunch, such as pureed vegetables with a protein (e.g., pureed chicken, lentils, beans) or baby-friendly grains. Around 4-6 tablespoons, increasing as tolerated.. 
+Schedule: {"time": "12:00", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 145 has been saved in database!
+Subject: Midday Play & Diaper Change. 
+Message: Engage your son in another period of active play. This can include floor time, reaching for toys, or listening to music. Change his diaper as needed to ensure comfort.. 
+Schedule: {"time": "12:30", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 146 has been saved in database!
+Subject: Afternoon Nap. 
+Message: Put your son down for his second nap of the day. This nap typically lasts 1.5-2 hours. Maintaining consistent nap times helps regulate his sleep cycle.. 
+Schedule: {"time": "14:00", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 147 has been saved in database!
+Subject: Post-Nap Feed & Snack. 
+Message: After waking from his afternoon nap, offer a milk feed (breast milk or formula, approx. 180-200ml). You can also introduce a small, age-appropriate snack like soft fruit pieces, yogurt, or baby crackers.. 
+Schedule: {"time": "16:00", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 148 has been saved in database!
+Subject: Late Afternoon Play & Diaper Change. 
+Message: Spend time playing with your son, perhaps going for a stroller ride, sensory play, or simply engaging in conversation. Ensure his diaper is clean and dry.. 
+Schedule: {"time": "16:30", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 149 has been saved in database!
+Subject: Dinner (Solids). 
+Message: Offer his solid dinner, focusing on a variety of food groups. Similar portions to lunch (4-6 tablespoons) but consider lighter options before bedtime. This helps him feel full through the night.. 
+Schedule: {"time": "18:00", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 150 has been saved in database!
+Subject: Bath Time & Diaper Change. 
+Message: Give your son a warm bath. This is an excellent part of the bedtime routine, helping to soothe and relax him. Ensure the water temperature is safe. Change into a fresh diaper after the bath.. 
+Schedule: {"time": "18:45", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 151 has been saved in database!
+Subject: Bedtime Feed & Routine. 
+Message: Offer a final milk feed (breast milk or formula, approx. 200-240ml). Follow this with a calming bedtime routine like reading a book, singing lullabies, and putting on pajamas. This signals to him that it's time for sleep.. 
+Schedule: {"time": "19:15", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 152 has been saved in database!
+Subject: Bedtime. 
+Message: Put your son into his crib awake but drowsy for the night. The goal is for him to learn to fall asleep independently. Ensure a safe sleep environment (on his back, clear crib). An 8-month-old typically sleeps 10-12 hours overnight.. 
+Schedule: {"time": "19:45", "type": "daily", "timezone": "CET"}.
+2026-01-05 20:39:24 - Eminder - INFO - inserttask:74 - TaskId 153 has been saved in database!
+Subject: Overnight Diaper Check (As Needed). 
+Message: If your son tends to wet heavily overnight or has sensitive skin, a quick and quiet diaper check and change (if necessary) can prevent discomfort and promote better sleep. Minimize disruption to avoid fully waking him.. 
+Schedule: {"time": "23:00", "type": "daily", "timezone": "CET"}.

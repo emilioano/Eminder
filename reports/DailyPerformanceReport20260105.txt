@@ -1,0 +1,71 @@
+====================================================================================================
+Daily Performance Report
+Generated: 2026-01-05 20:39:55.482205.
+Horizon: Today.
+====================================================================================================
+
+
+Operation record count: 1468.
+Average operation time: 0.18 s.
+
+
+Operation types:
+ {'DailyReportJob', 'messageout', '<lambda>', 'Messageout', 'Schedulerjob', 'Dailyreportjob', 'Task_Handler'}.
+
+
+Performance per operation:
+DailyReportJob
+     Count: 382.
+     Total time spent: 4.32 s
+     Average time: 0.01 s.
+     Max time: 0.03 s.
+     Min time: 0.00 s.
+
+
+messageout
+     Count: 1.
+     Total time spent: 0.00 s
+     Average time: 0.00 s.
+     Max time: 0.00 s.
+     Min time: 0.00 s.
+
+
+<lambda>
+     Count: 1.
+     Total time spent: 0.00 s
+     Average time: 0.00 s.
+     Max time: 0.00 s.
+     Min time: 0.00 s.
+
+
+Messageout
+     Count: 23.
+     Total time spent: 35.71 s
+     Average time: 1.55 s.
+     Max time: 2.20 s.
+     Min time: 1.00 s.
+
+
+Schedulerjob
+     Count: 686.
+     Total time spent: 217.98 s
+     Average time: 0.32 s.
+     Max time: 40.09 s.
+     Min time: 0.01 s.
+
+
+Dailyreportjob
+     Count: 328.
+     Total time spent: 7.64 s
+     Average time: 0.02 s.
+     Max time: 0.06 s.
+     Min time: 0.01 s.
+
+
+Task_Handler
+     Count: 47.
+     Total time spent: 0.13 s
+     Average time: 0.00 s.
+     Max time: 0.01 s.
+     Min time: 0.00 s.
+
