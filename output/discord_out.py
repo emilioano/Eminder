@@ -1,12 +1,13 @@
 from modules.logger import log,debug,info,warning,error,critical
-from config import DRY_RUN_OUTPUT
+from config import DRY_RUN_OUTPUT,DISCORD_WEBHOOK_ADMIN
+
 
 import requests
 
 def discord_send_message(webhook='None',content='Hej'):
 
     if not webhook:
-        webhook='https://discord.com/api/webhooks/1455953105819799729/DJeIBLrw4NGsHqNpMU4J04cg_GAE0WgVwShFbhjxehqSkNltwMpVSiBhU2ThRx9i5eee'
+        webhook=DISCORD_WEBHOOK_ADMIN
         content=f'Message is sent to admin to check as the recipients webhook is not properly setup! {webhook}.'
         error(f'Message is sent to admin to check as the recipients webhook is not properly setup! {webhook}.')
 
@@ -30,4 +31,4 @@ def discord_send_message(webhook='None',content='Hej'):
 
 
 if __name__ == '__main__':
-    discord_send_message('https://discord.com/api/webhooks/1455953105819799729/DJeIBLrw4NGsHqNpMU4J04cg_GAE0WgVwShFbhjxehqSkNltwMpVSiBhU2ThRx9i5eee','Alert from Eminder!')
+    discord_send_message(DISCORD_WEBHOOK_ADMIN,'Alert from Eminder!')
