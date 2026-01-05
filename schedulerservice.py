@@ -10,7 +10,7 @@ sleep_time = 15
 
 def job():
     while 0 < 1:
-        schedulemanager.event_trigger()
+        schedulemanager.TaskManager().run()
         print(f'{colors.OKGREEN}')
         print('='*60)
         print(f'Running the schedule manager as a service (Repeats every {sleep_time} seconds.)')

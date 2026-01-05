@@ -1,6 +1,6 @@
 """
 Logging utilities for Eminder.
-This logger I have stolen from my Python teacher Marcus Bellika :D 
+This logger I have stolen from our Python teacher Marcus Bellika :D 
 
 Demonstrates:
 - Using Python's built-in 'logging' module (standardbibliotek!)
@@ -14,7 +14,6 @@ This replaces simple print() with proper logging infrastructure.
 
 import logging
 import sys
-from pathlib import Path
 from datetime import datetime
 import config
 
@@ -22,7 +21,7 @@ import config
 # === LOGGER SETUP ===
 def _setup_logger():
     """
-    Configure and return the DataLab logger.
+    Configure and return the logger.
 
     Demonstrates:
     - Creating a named logger
@@ -95,7 +94,7 @@ def log(msg):
     Args:
         msg: Message to log
     """
-    _logger.info(msg)
+    _logger.info(msg, stacklevel=2)
 
 
 def debug(msg):
@@ -105,7 +104,7 @@ def debug(msg):
     Args:
         msg: Debug message
     """
-    _logger.debug(msg)
+    _logger.debug(msg, stacklevel=2)
 
 
 def info(msg):
@@ -115,7 +114,7 @@ def info(msg):
     Args:
         msg: Info message
     """
-    _logger.info(msg)
+    _logger.info(msg, stacklavel=2)
 
 
 def warning(msg):
@@ -125,7 +124,7 @@ def warning(msg):
     Args:
         msg: Warning message
     """
-    _logger.warning(msg)
+    _logger.warning(msg, stacklevel=2)
 
 
 def error(msg):
@@ -135,7 +134,7 @@ def error(msg):
     Args:
         msg: Error message
     """
-    _logger.error(msg)
+    _logger.error(msg, stacklevel=2)
 
 
 def critical(msg):
@@ -145,7 +144,7 @@ def critical(msg):
     Args:
         msg: Critical error message
     """
-    _logger.critical(msg)
+    _logger.critical(msg, stacklevel=2)
 
 
 # === DEMONSTRATION FUNCTION ===

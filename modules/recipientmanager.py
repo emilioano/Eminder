@@ -1,74 +1,108 @@
-import mysql.connector
-from config import DBCONFIG
 from modules.logger import log,debug,info,warning,error,critical
+from modules import dbactions,inputvalidation
 
-DBConn = mysql.connector.connect(**DBCONFIG);
-cursor = DBConn.cursor()
-
-def run_recipient_program(TaskId=None):
+def menuoptions():
     print('='*60)
     print('Make a selection.')
     print('1. View records in DB.')
     print('2. Enter a new record into DB')
     print('3. Remove a record from DB')
-    selection = int(input())
+    print('0. Exit')
     print('='*60)
 
 
-    if selection == 1:
-        print('Showing records')
-    
-        cursor.execute('SELECT * FROM Recipients')
+def run_recipient_program(TaskId=None):
+    if TaskId:
+        selection = 2
+    else:
+        selection = 0
 
-        result = cursor.fetchall()
+    validate = False
 
-        for row in result:
-            log(row)
-
-
-    if selection == 2:
-        print('Enter the required input fields')
-
-        name = str(input('Name: '))
-        email = str(input('Email: '))
-        phone = str(input('Phone # (optional): '))
-        discord_webhhok = str(input('Discord Webhook (optional): '))
-
-        sql = 'INSERT INTO Recipients(Name,Email,Phone,DiscordHook) VALUES (%s,%s,%s,%s);'
-
-
-
-
+    while True:
         try:
-            cursor.execute(sql, (name,email,phone,discord_webhhok))
-            saved_id = cursor.lastrowid
-            DBConn.commit()
-            
+            menuoptions()
+            selection = int(input())
 
-            if TaskId:
-                sql2 = 'INSERT INTO TaskRecipients(Taskid,RecipientId) VALUES (%s,%s);'
-                cursor.execute(sql2, (TaskId,saved_id))
-                DBConn.commit()
+            if selection < 0 or selection > 3:
+                print('='*60)
+                print('Invalid selection, try again!')
+                print('='*60)
+                continue
+
+            elif selection == 1:
+                print('Showing records')
+                
+                try:
+                    dbactions.viewrecipients()
+                except Exception as err:
+                    error(err)
+
+            elif selection == 2:
+                print('Enter the required input fields')
+
+                name = str(input('Name: '))
+                email = str(input('Email: '))
+                phone = str(input('Phone # (optional): '))
+                discord_webhook = str(input('Discord Webhook (optional): '))
+
+                # Fields to input validate
+                val_fields = {
+                    'name':{'value':name,'type':'text','required':True},
+                    'email':{'value':email,'type':'email','required':True},
+                    'phone':{'value':phone,'type':'phone','required':False},
+                    'discord_webhook':{'value':discord_webhook,'type':'http','required':False}
+                }
+
+                validate = inputvalidation.inputvalidation(val_fields)
+
+                if not validate:
+                    print('Invalid input in field(s) detected, please try again!')
+                    selection = 2
+                    continue
+
+                elif validate:
+                    try:
+                        dbactions.insertrecipient(name,email,phone,discord_webhook,TaskId)
+                        if TaskId:
+                            break
+                    except Exception as Err:
+                        error(Err)
+
+                
+
+            elif selection == 3:
+                print('Enter the id for the record to remove')
+
+                id = str(input('Id: '))
+
+                # Fields to validate input, input:type
+                val_fields = { 'id':{'value':id,'type':'integer','required':True}}
+
+                validate = inputvalidation.inputvalidation(val_fields)
+
+                if not validate:
+                    print('Invalid input in field(s) detected, please try again!')
+                    selection = 3
+                    continue
+
+                elif validate:
+                    try:
+                        dbactions.deleterecipient(id)
+                    except Exception as Err:
+                        error(Err)
 
 
-        except Exception as err:
-            print(err)
+            elif selection == 0:
+                break
 
 
-    if selection == 3:
-        print('Enter the id for the record to remove')
+        except ValueError:
+            print('='*60)
+            print('Invalid selection, try again!')
+            print('='*60)
+            continue
 
-        id = str(input('Id: '))
-
-        sql = 'DELETE FROM Recipients Where Id = %s;'
-
-        try:
-            cursor.execute(sql, (id))
-            DBConn.commit()
-        except Exception as err:
-            (print(err))
-
-        
 
 
 
