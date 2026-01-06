@@ -55,7 +55,7 @@ def run_recipient_program(TaskId=None):
                     'discord_webhook':{'value':discord_webhook,'type':'http','required':False}
                 }
 
-                validate = inputvalidation.inputvalidation(val_fields)
+                validate = inputvalidation(val_fields)
 
                 if not validate:
                     print('Invalid input in field(s) detected, please try again!')
@@ -80,7 +80,7 @@ def run_recipient_program(TaskId=None):
                 # Fields to validate input, input:type
                 val_fields = { 'id':{'value':id,'type':'integer','required':True}}
 
-                validate = inputvalidation.inputvalidation(val_fields)
+                validate = inputvalidation(val_fields)
 
                 if not validate:
                     print('Invalid input in field(s) detected, please try again!')

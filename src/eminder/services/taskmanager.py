@@ -5,6 +5,7 @@ from eminder.utils import log,debug,info,warning,error,critical
 from eminder.services import recipientmanager
 from eminder.db import dbactions
 from eminder.validation import inputvalidation
+from eminder.integrations import AIprompt
 
 def menuoptions():
                 print('='*60)
@@ -160,7 +161,7 @@ def run_task_manager():
                     'message':{'value':message,'type':'text','required':True}
                 }
 
-                validate = inputvalidation.inputvalidation(val_fields)
+                validate = inputvalidation(val_fields)
                 if not validate:
                     print('Invalid input in field(s) detected, please try again!')
                     selection = 2
@@ -183,7 +184,7 @@ def run_task_manager():
                 print("Describe what you want to schedualize!")
                 prompt = input()
                 val_fields = {'prompt':{'value':prompt,'type':'text','required':True},}
-                validate = inputvalidation.inputvalidation(val_fields)
+                validate = inputvalidation(val_fields)
 
                 if not validate:
                     print('Invalid input in field(s) detected, please try again!')
@@ -192,7 +193,7 @@ def run_task_manager():
                 elif validate:
 
 
-                    airesponse_regex = aimanager.AIprompt(prompt)
+                    airesponse_regex = AIprompt(prompt)
                     jsonresponse = json.loads(airesponse_regex)
                     answers = jsonresponse["answers"]
     
@@ -246,7 +247,7 @@ def run_task_manager():
                  # Fields to validate input, input:type
                 val_fields = { 'taskid':{'value':taskid,'type':'integer','required':True}}
 
-                validate = inputvalidation.inputvalidation(val_fields)
+                validate = inputvalidation(val_fields)
 
                 if not validate:
                     print('Invalid input in field(s) detected, please try again!')
