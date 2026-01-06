@@ -68,11 +68,16 @@ def run():
                 break
 
 
+
         except ValueError:
             print('='*60)
             print('Invalid selection, try again!')
             print('='*60)
             continue
+
+        except KeyboardInterrupt:
+            log(f'Application was stopped with keyboard interrupt.')
+            return
 
         except Exception as err:
             error(err)
@@ -81,11 +86,13 @@ def run():
 if __name__ == '__main__':
     try:
         run()
+    
+    except KeyboardInterrupt:
+        log(f'Application was stopped with keyboard interrupt.')
 
     except Exception as err:
         error(f'Application stopped with following: {err}')
 
-    except KeyboardInterrupt:
-        log(f'Application was stopped with keyboard interrupt.')
+
 
     
