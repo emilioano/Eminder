@@ -1,15 +1,15 @@
 import json
 import datetime
 
-from modules.logger import log,debug,info,warning,error,critical
-from config import DBCONFIG,colors
-from output import mail_out, discord_out, reports
-from analysis import performance
+from eminder.utils import log,debug,info,warning,error,critical
+from eminder.config import colors
+from eminder.integrations import mail_out, discord_out
+from eminder.services import reports
+from eminder.analysis import performance
+from eminder.db import dbactions
 
-from modules import dbactions
 
-
-class TaskManager:
+class ScheduleManager:
     def __init__(self):
         self.date_time = datetime.datetime.now()
         self.today = self.date_time.date()
@@ -154,14 +154,11 @@ class TaskManager:
     def execute(self, row, channel, subject, message):
         recipient_email = row.get('Email')
         recipient_discordhook = row.get('DiscordHook')
+            
+        start_time, finish_time, operation_time = performance.timed_operation(self.messageout, channel, recipient_email, subject, message, recipient_discordhook)
+        log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
 
-        try:
-            start_time, finish_time, operation_time = performance.timed_operation(self.messageout, channel, recipient_email, subject, message, recipient_discordhook)
-            log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
-
-            dbactions.setlasttriggered(self.date_time, row.get('TaskId'))
-        except Exception as err:
-            error(f'{err}') 
+        dbactions.setlasttriggered(self.date_time, row.get('TaskId'))
 
     def run(self):
         def schedulerjob():
@@ -364,7 +361,7 @@ def event_trigger():
   
     start_time, finish_time, operation_time = performance.timed_operation(Schedulerjob)
 
-    performance.timed_operation(reports.DailyReportJob)
+    performance.timed_operation(reports.dailyreportjob)
 
     print(f'{colors.WARNING}')
     print('Performance monitor!')
@@ -380,4 +377,4 @@ def event_trigger():
 #    event_trigger()
 
 if __name__ == '__main__':        
-    TaskManager().run()
+    ScheduleManager().run()

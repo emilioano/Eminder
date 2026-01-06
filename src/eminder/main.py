@@ -1,9 +1,26 @@
-from modules import recipientmanager,taskmanager,schedulemanager
-import schedulerservice
+from eminder.services import recipientmanager,taskmanager,schedulemanager
+from eminder import schedulerservice
+from eminder.utils import log,debug,info,warning,error,critical
+
+from eminder.config import colors
+
+
+def eminder_logo_color():
+    logo = r'''
+▄▖   ▘   ▌    
+▙▖▛▛▌▌▛▌▛▌█▌▛▘
+▙▖▌▌▌▌▌▌▙▌▙▖▌ 
+                
+Minimal personal assistant app powered by AI!
+    '''
+    print('='*60)
+    print(logo)
+
+
 
 def menuoptions():
     print('='*60)
-    print('Eminder main menu!')
+    print('Main menu!')
     print('='*60)
     print('Make a selection.')
     print('1. Receipient manager (View, Enter, Delete Recipients).')
@@ -20,6 +37,7 @@ def run():
 
     while True:
         try:
+            eminder_logo_color()
             menuoptions()
             selection = int(input())
 
@@ -39,7 +57,7 @@ def run():
                 selection = 0
 
             elif selection == 3:
-                schedulemanager.TaskManager().run()
+                schedulemanager.ScheduleManager().run()
                 selection = 0
 
             elif selection == 4:
@@ -56,6 +74,18 @@ def run():
             print('='*60)
             continue
 
+        except Exception as err:
+            error(err)
+
 
 if __name__ == '__main__':
-    run()
+    try:
+        run()
+
+    except Exception as err:
+        error(f'Application stopped with following: {err}')
+
+    except KeyboardInterrupt:
+        log(f'Application was stopped with keyboard interrupt.')
+
+    

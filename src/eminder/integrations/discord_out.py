@@ -1,5 +1,5 @@
-from modules.logger import log,debug,info,warning,error,critical
-from config import DRY_RUN_OUTPUT,DISCORD_WEBHOOK_ADMIN
+from eminder.utils import log,debug,info,warning,error,critical
+from eminder.config import DRY_RUN_OUTPUT,DISCORD_WEBHOOK_ADMIN
 
 
 import requests
@@ -8,8 +8,8 @@ def discord_send_message(webhook='None',content='Hej'):
 
     if not webhook:
         webhook=DISCORD_WEBHOOK_ADMIN
-        content=f'Message is sent to admin to check as the recipients webhook is not properly setup! {webhook}.'
-        error(f'Message is sent to admin to check as the recipients webhook is not properly setup! {webhook}.')
+        content=f'Message is sent to admin to check as the recipients webhook is not properly setup! {content}.'
+        error(f'Message is sent to admin to check as the recipients webhook is not properly setup! {content}.')
 
     webhook_url = webhook
     data = {

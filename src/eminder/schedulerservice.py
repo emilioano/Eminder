@@ -1,16 +1,16 @@
 import time
 from datetime import datetime,timedelta
 
-from config import colors
-from modules import schedulemanager
-from modules.logger import log,debug,info,warning,error,critical
+from eminder.config import colors
+from eminder.services import schedulemanager
+from eminder.utils import log,debug,info,warning,error,critical
 
 sleep_time = 15
 
 
 def job():
     while 0 < 1:
-        schedulemanager.TaskManager().run()
+        schedulemanager.ScheduleManager().run()
         print(f'{colors.OKGREEN}')
         print('='*60)
         print(f'Running the schedule manager as a service (Repeats every {sleep_time} seconds.)')

@@ -1,9 +1,7 @@
 import datetime
 
-from config import DBCONFIG
-from modules.logger import log,debug,info,warning,error,critical
-
-from modules import dbactions
+from eminder.utils import log,debug,info,warning,error,critical
+from eminder.db import dbactions
 
 
 

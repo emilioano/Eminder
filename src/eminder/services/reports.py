@@ -1,19 +1,15 @@
 import datetime
-from time import time
-import mysql.connector
 from pathlib import Path
 
-from config import DBCONFIG,PROJECT_ROOT
-from modules.logger import log,debug,info,warning,error,critical
-from analysis import performance 
-from modules import dbactions
+from eminder.config import PROJECT_ROOT
+from eminder.utils import log,debug,info,warning,error,critical
+from eminder.analysis import performance 
+from eminder.db import dbactions
 
 
 def create_report(report_name='Performance report',horizon='Today'):
 
     date_time = datetime.datetime.now()
-
-
 
     lines = []
     lines.append('='*100)
@@ -63,8 +59,6 @@ def create_report(report_name='Performance report',horizon='Today'):
             break
 
     averagetime = sum(operationtime)/recordcount
-    #ageragetimeperoperationtype = 
-
 
     lines.append(f'Operation record count: {recordcount}.')
     lines.append(f'Average operation time: {averagetime:.2f} s.')
@@ -122,11 +116,6 @@ def dailyreportjob():
 
 
 if __name__ == '__main__':
-    #print(create_report())
-    #save_report_to_file(create_report(), filename='DailyPerformanceReport')
-    #start_time, finish_time, operation_time = performance.timed_operation(save_report_to_file(create_report(), filename='DailyPerformanceReport'))
-
-
     start_time, finish_time, operation_time = performance.timed_operation(dailyreportjob)
     print(f'Start time: {start_time.strftime("%H:%M:%S")}. Finish time: {finish_time.strftime("%H:%M:%S")}')
     print(f'Operation time: {operation_time:.2f} seconds.')
