@@ -15,7 +15,7 @@ This replaces simple print() with proper logging infrastructure.
 import logging
 import sys
 from datetime import datetime
-import config
+from eminder import config
 
 
 # === LOGGER SETUP ===

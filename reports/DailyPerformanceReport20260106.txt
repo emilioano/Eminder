@@ -1,0 +1,39 @@
+====================================================================================================
+Daily Performance Report
+Generated: 2026-01-06 17:50:56.311827.
+Horizon: Today.
+====================================================================================================
+
+
+Operation record count: 18.
+Average operation time: 0.14 s.
+
+
+Operation types:
+ {'Dailyreportjob', 'Messageout', 'Schedulerjob'}.
+
+
+Performance per operation:
+Dailyreportjob
+     Count: 3.
+     Total time spent: 0.02 s
+     Average time: 0.01 s.
+     Max time: 0.01 s.
+     Min time: 0.00 s.
+
+
+Messageout
+     Count: 11.
+     Total time spent: 1.97 s
+     Average time: 0.18 s.
+     Max time: 1.97 s.
+     Min time: 0.00 s.
+
+
+Schedulerjob
+     Count: 4.
+     Total time spent: 0.56 s
+     Average time: 0.14 s.
+     Max time: 0.29 s.
+     Min time: 0.08 s.
+

@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 import re
 
-from modules.logger import log,debug,info,warning,error,critical
+from eminder.utils import log,debug,info,warning,error,critical
 
 
 debug = False
@@ -77,7 +77,7 @@ Following is the exact format and nothing should come before {{ or after}}:
         return airesponse_regex
 
     else:
-        error('Error ',airesponse.status_code,airesponse.text)
+        error(f'Error {airesponse.status_code} {airesponse.text}')
         return 'Error',airesponse.status_code,airesponse.text
         
 if __name__ == '__main__':

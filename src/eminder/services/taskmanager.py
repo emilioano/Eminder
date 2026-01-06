@@ -1,8 +1,10 @@
 
 import json
 import datetime
-from modules.logger import log,debug,info,warning,error,critical
-from modules import recipientmanager, aimanager, dbactions, inputvalidation
+from eminder.utils import log,debug,info,warning,error,critical
+from eminder.services import recipientmanager
+from eminder.db import dbactions
+from eminder.validation import inputvalidation
 
 def menuoptions():
                 print('='*60)

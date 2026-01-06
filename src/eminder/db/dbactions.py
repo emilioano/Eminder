@@ -1,11 +1,13 @@
 import mysql.connector
-from config import DBCONFIG
-from modules.logger import log,debug,info,warning,error,critical
+from eminder.config import DBCONFIG
+from eminder.utils import log,debug,info,warning,error,critical
 
-DBConn = mysql.connector.connect(**DBCONFIG);
-cursor = DBConn.cursor()
-cursor_dict = DBConn.cursor(dictionary=True)
-
+try:
+    DBConn = mysql.connector.connect(**DBCONFIG);
+    cursor = DBConn.cursor()
+    cursor_dict = DBConn.cursor(dictionary=True)
+except Exception as err:
+    error(f'Error: {err}')    
 
 ### RECIPIENT MANAGER DB ACTIONS ###
 def viewrecipients():
@@ -162,3 +164,4 @@ def fetchperformancerecords(horizon):
     ''')
     records = cursor_dict.fetchall()
     return records
+### END REPORT CREATOR DB ACTIONS ###

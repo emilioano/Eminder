@@ -1,0 +1,46 @@
+2026-01-06 17:25:41 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b9420dc7deafc5 has been sent to emil.sjokvist@gmail.com. Message: fdospfkdsokgffoepw 
+[ This is an alert from Eminder triggered at daily 13:00. Recipient: emil.sjokvist@gmail.com ] .
+2026-01-06 17:25:41 - Eminder - INFO - execute:159 - Operation time: 1.97s. Start time: 2026-01-06 17:25:39.588836. Finish time 2026-01-06 17:25:41.561132.
+2026-01-06 17:25:41 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:25:39.565927 On TaskId 25.
+2026-01-06 17:25:42 - Eminder - INFO - <module>:36 - Schedulerservice was stopped with keyboard interrupt.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Alert from Eminder to emil.sjokvist@gmail.com!. Message: Nu är klockan 07:48!! Fan! 
+[ This is an alert from Eminder triggered at daily 07:48. Recipient: emil.sjokvist@gmail.com ] . Recipient: emil.sjokvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.517635. Finish time 2026-01-06 17:41:00.518866.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 35.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hej. Message: SAn 
+[ This is an alert from Eminder triggered at daily 10:10. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.571156. Finish time 2026-01-06 17:41:00.571714.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 105.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hej. Message: SAn 
+[ This is an alert from Eminder triggered at daily 10:10. Recipient: emil.sjokvist@gmail.com ] . Recipient: emil.sjokvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.590531. Finish time 2026-01-06 17:41:00.591646.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 105.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hej. Message: Hej 
+[ This is an alert from Eminder triggered at daily 10:15. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.607662. Finish time 2026-01-06 17:41:00.608419.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 108.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Early Morning Milk Feed. Message: Offer a full feed of breast milk or formula. At 7 months and 10kg, your baby still relies on milk as a primary source of nutrition and hydration, especially after a long night's sleep. 
+[ This is an alert from Eminder triggered at daily 07:00. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.629930. Finish time 2026-01-06 17:41:00.630818.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 110.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Daily Morning Meditation. Message: Dedicate 10-15 minutes each morning to meditation. This will help you start your day with a calm and focused mind, reduce stress, and improve overall mental well-being. Find a quiet space, sit comfortably, and focus on your breath. Consistency is key, so even a short session daily is more beneficial than longer, infrequent ones. 
+[ This is an alert from Eminder triggered at daily 07:00. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.653691. Finish time 2026-01-06 17:41:00.654505.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 121.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Mid-day Mindful Pause. Message: Take 5 minutes during your lunch break or a natural pause in your day to practice a short mindfulness exercise. This can be a body scan, focusing on sensations, or a few deep breaths. It helps to re-center, release tension accumulated during the morning, and regain focus for the rest of your day. 
+[ This is an alert from Eminder triggered at daily 13:00. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.671689. Finish time 2026-01-06 17:41:00.672626.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 122.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Refine Signature Smirk. Message: Daily at 10:00, spend 5 minutes in front of a mirror practicing your most charmingly mischievous smirk. Focus on the subtle arch of the eyebrow and the hint of a knowing smile. This is crucial for maintaining your 'bad boy' credibility while ensuring you're perceived as 'very good' at it. 
+[ This is an alert from Eminder triggered at daily 10:00. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.703067. Finish time 2026-01-06 17:41:00.704391.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 126.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Hejsan. Message: Jaha 
+[ This is an alert from Eminder triggered at daily 09:32. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.726422. Finish time 2026-01-06 17:41:00.726900.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 132.
+2026-01-06 17:41:00 - Eminder - INFO - gmail_send_message:49 - Mail message output was triggered in Dry run mode! Subject: Testar med nya klasser . Message: Fan 
+[ This is an alert from Eminder triggered at daily 16:46. Recipient: Emil Sjökvist ] . Recipient: emil.sjoekvist@gmail.com.
+2026-01-06 17:41:00 - Eminder - INFO - execute:159 - Operation time: 0.00s. Start time: 2026-01-06 17:41:00.747641. Finish time 2026-01-06 17:41:00.748504.
+2026-01-06 17:41:00 - Eminder - INFO - setlasttriggered:130 - Last triggered updated to 2026-01-06 17:41:00.480390 On TaskId 135.
+2026-01-06 17:50:57 - Eminder - INFO - <module>:36 - Schedulerservice was stopped with keyboard interrupt.

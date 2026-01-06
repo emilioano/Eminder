@@ -14,8 +14,8 @@ from google.oauth2.credentials import Credentials
 
 # === PATH CONFIGURATION ===
 # Using __file__ makes paths work regardless of where the script is run from
-PACKAGE_DIR = Path(__file__).resolve().parent  # Directory where this file lives
-PROJECT_ROOT = PACKAGE_DIR  # Eminder root
+PACKAGE_DIR = Path(__file__).parent  # Directory where this file lives
+PROJECT_ROOT = PACKAGE_DIR.parent.parent  # Eminder root
 DATA_DIR = PROJECT_ROOT / 'data'  # Data directory in project root
 
 # === APPLICATION SETTINGS ===

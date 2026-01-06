@@ -351,3 +351,44 @@ Schedule: {"time": "19:45", "type": "daily", "timezone": "CET"}.
 Subject: Overnight Diaper Check (As Needed). 
 Message: If your son tends to wet heavily overnight or has sensitive skin, a quick and quiet diaper check and change (if necessary) can prevent discomfort and promote better sleep. Minimize disruption to avoid fully waking him.. 
 Schedule: {"time": "23:00", "type": "daily", "timezone": "CET"}.
+2026-01-05 22:41:53 - Eminder - INFO - gmail_send_message:47 - E-mail with Id: 19b901bfe1f8ec1b has been sent to emil.sjoekvist@gmail.com. Message: Before bed, dedicate 10 minutes to a gentle, reflective meditation. This can help process the day's events, release any lingering stress, and prepare your mind and body for restful sleep. Focus on gratitude or simply observe your thoughts without judgment. 
+[ This is an alert from Eminder triggered at daily 21:30. Recipient: Emil Sjökvist ] .
+2026-01-05 22:41:53 - Eminder - INFO - execute:160 - Operation time: 10.84s. Start time: 2026-01-05 22:41:42.710154. Finish time 2026-01-05 22:41:53.552101.
+2026-01-05 22:41:53 - Eminder - INFO - setlasttriggered:128 - Last triggered updated to 2026-01-05 22:41:42.616540 On TaskId 123.
+2026-01-05 23:15:06 - Eminder - ERROR - <module>:10 - 2017 (HY000): Can't open named pipe to host: .  pipe: MySQL (2)
+2026-01-05 23:15:22 - Eminder - ERROR - run_recipient_program:39 - name 'cursor' is not defined
+2026-01-05 23:15:47 - Eminder - ERROR - <module>:10 - 2017 (HY000): Can't open named pipe to host: .  pipe: MySQL (2)
+2026-01-05 23:15:59 - Eminder - ERROR - run_recipient_program:39 - name 'cursor' is not defined
+2026-01-05 23:16:13 - Eminder - ERROR - run:76 - module 'modules.schedulemanager' has no attribute 'TaskManager'
+2026-01-05 23:16:53 - Eminder - ERROR - <module>:10 - 2017 (HY000): Can't open named pipe to host: .  pipe: MySQL (2)
+2026-01-05 23:17:51 - Eminder - ERROR - <module>:10 - Error: 2017 (HY000): Can't open named pipe to host: .  pipe: MySQL (2)
+2026-01-05 23:18:20 - Eminder - ERROR - <module>:10 - Error: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2026-01-05 23:19:00 - Eminder - ERROR - run:76 - error() takes 1 positional argument but 3 were given
+2026-01-05 23:20:35 - Eminder - ERROR - AIprompt:80 - Error 400 {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2026-01-05 23:20:35 - Eminder - ERROR - run:76 - the JSON object must be str, bytes or bytearray, not tuple
+2026-01-05 23:28:58 - Eminder - INFO - <module>:89 - Application was stopped with keyboard interrupt.
+2026-01-05 23:31:45 - Eminder - INFO - deleterecipient:50 - Record with id 42 was deleted from the Recipients table!
+2026-01-05 23:32:00 - Eminder - INFO - deleterecipient:50 - Record with id 41 was deleted from the Recipients table!
+2026-01-05 23:36:02 - Eminder - INFO - <module>:89 - Application was stopped with keyboard interrupt.

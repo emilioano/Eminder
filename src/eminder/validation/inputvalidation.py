@@ -1,4 +1,5 @@
-from modules.logger import log,debug,info,warning,error,critical
+from eminder.utils import log,debug,info,warning,error,critical
+
 import re
 import datetime
 

@@ -1,6 +1,5 @@
 import base64
 from email.message import EmailMessage
-from modules.logger import log,error
 
 import google.auth
 from googleapiclient.discovery import build
@@ -8,7 +7,8 @@ from googleapiclient.errors import HttpError
 
 from google.oauth2.credentials import Credentials
 
-from config import GOOGLECRED, DRY_RUN_OUTPUT
+from eminder.utils import log,debug,info,warning,error,critical
+from eminder.config import GOOGLECRED, DRY_RUN_OUTPUT
 
 
 def gmail_send_message(to='emil.sjoekvist@gmail.com', subject='Hej', content='Ett mail'):
