@@ -38,7 +38,7 @@ eminder
 # Alternatively
 python3 -m eminder
 
-# To start the scheduler service which is responsible for notification distribution, it's also possible to start is via the main menu:
+# To start the scheduler service which is responsible for notification distribution, it's also possible to start via the main menu:
 python3 -m eminder:schedulerservice
 
 # To uninstall the project:
@@ -48,6 +48,13 @@ pip uninstall eminder
 
 ## Usage
 
-When starting the application a main menu is displayed where the user can make different choises.
-Besides from this, the schedulemanager should be run as a service in the background to handle the distribution of the notifications!
+When starting the application a main menu is displayed where the user can make different choices, for example create tasks and connect them to designated recipients. 
+The tasks will be delivered to the recipients upon desired trigger time.
+The available types is: once, daily, weekly, monthly, interval, yearly.
+There is a feature to let AI create the tasks based on user input which is very powerful.
+
+Besides from this, one instance of the schedulemanager should be run as a service in the background which will handle the trigger checks and distribution of notifications!
+
+The application also generates a performance report measuring operation times and generates files in the reports folder.
+There is a logger that records relevant actions and generates .txt files which are located in the logs folder.
 

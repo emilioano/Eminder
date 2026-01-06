@@ -112,7 +112,7 @@ def fetchtasks():
     tr.*, 
     t.*, 
     r.* 
-    FROM Taskrecipients AS tr 
+    FROM TaskRecipients AS tr 
     INNER JOIN Tasks as t on tr.Taskid = t.Taskid 
     INNER JOIN Recipients as r on tr.RecipientId = r.RecipientId
     ORDER BY t.TaskId ASC;
