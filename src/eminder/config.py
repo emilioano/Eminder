@@ -23,7 +23,7 @@ LOG_PREFIX = '[EmilFlow]'
 DECIMAL_PLACES = 2
 
 # === DRY RUN FOR OUTPUT (Don't spam my inbox when testing) === 
-DRY_RUN_OUTPUT = False
+DRY_RUN_OUTPUT = True
 
 
 # .env finder
