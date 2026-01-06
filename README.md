@@ -11,13 +11,18 @@ AI feature to schedualize tasks is included.
 
 Please set the parameters properly in the .env file.
 
-
-
-To install the Python applicaton:
+To set up db:
 ```bash
 # Example on how to create the database on a Linux machine with MySQl
 mysql -u root < Eminder/dbmodel/EminderSchedulerDB.sql
 
+# Example on how to create a db-user and grant privileges to the db. The details can then be entered into the .env file so the application can connect..
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON EminderSchedulerDB.* TO 'user'@'localhost';
+```
+
+To install the Python applicaton:
+```bash
 # Set up a virtual environment (venv). Not mandatory but recommended.
 python3 -m venv .venv
 
