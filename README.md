@@ -9,7 +9,7 @@ AI feature to schedualize tasks is included.
 * MySQL DB: The application is using a MySQL database to store tasks and recipients and more. There is an sql script file and also one MySQL workbench mwb-file with EER-model included, inside the dbmodel folder which can be utilized to set up a fit for purpose database.
 * Integrations: To send mail, discord messages and to use AI feature, the application is using Google Gmail API, Discord webhook and Gemini API key. 
 
-Please set the parameters properly in the .env file.
+Please set the parameters properly in the .env file. There is an .env.template file provided in the root folder, please rename to .env and enter your own details.
 
 To set up db:
 ```bash
