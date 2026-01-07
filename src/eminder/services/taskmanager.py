@@ -197,7 +197,7 @@ def run_task_manager():
                     jsonresponse = json.loads(airesponse_regex)
                     answers = jsonresponse["answers"]
     
-                    savepost = input('Do you want to save this record(s)? Y/n')
+                    savepost = input('Do you want to save this record(s)? [Y/n]')
     
                     if savepost == "Y":
                         channel = int(input('Channels to use (1. E-mail. 2. Discord bot. 3. All): '))
