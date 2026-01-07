@@ -9,6 +9,7 @@ def discord_send_message(webhook='None',content='Hej'):
     if not webhook:
         if not DISCORD_WEBHOOK_ADMIN:
             error(f'There is no webhook provided to send any notification to discord, please check setup! Message: {content}.')
+            return
         else:
             webhook=DISCORD_WEBHOOK_ADMIN
             content=f'Message is sent to admin to check as the recipients webhook is not properly setup! {content}.'
