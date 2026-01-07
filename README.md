@@ -58,3 +58,10 @@ Besides from this, one instance of the schedulemanager should be run as a servic
 The application also generates a performance report measuring operation times and generates files in the reports folder.
 There is a logger that records relevant actions and generates .txt files which are located in the logs folder.
 
+# Ideas for the future
+
+* User management system 
+
+* Web front
+
+* Application published publicly
