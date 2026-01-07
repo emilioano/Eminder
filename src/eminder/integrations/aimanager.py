@@ -3,6 +3,7 @@ import json
 from dotenv import load_dotenv
 import os
 import re
+import datetime
 
 from eminder.utils import log,debug,info,warning,error,critical
 
@@ -10,6 +11,8 @@ from eminder.utils import log,debug,info,warning,error,critical
 debug = False
 
 load_dotenv(override=True)
+
+date_time = datetime.datetime.now()
 
 ### Prompt to AI
 
@@ -34,6 +37,8 @@ In case interval, input in "time", format should be HH:MM and interval should co
 In case yearly, input in "time", format should be: YYYY-MM-DD HH:MM and represent the first occurance for the task which will repeat yearly. 
 
 You can put multiple tasks inside "answers" if required, return a single JSON object with an array of answers!
+
+The current date and time is: {date_time}.
 
 Do not put anything additional in the answer outside of the JSON object:
 
@@ -65,7 +70,7 @@ Following is the exact format and nothing should come before {{ or after}}:
     aidata = {'contents':[
         {'parts':[{'text':askprompt}
     ]}]}
-    airesponse = requests.post(ai_endpoint,headers=headers,data=json.dumps(aidata),verify=False)
+    airesponse = requests.post(ai_endpoint,headers=headers,data=json.dumps(aidata)  )
     if airesponse.status_code==200:
         airesult = airesponse.json()
         airesulttext = airesult['candidates'][0]['content']['parts'][0]['text']

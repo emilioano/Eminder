@@ -22,6 +22,9 @@ DATA_DIR = PROJECT_ROOT / 'data'  # Data directory in project root
 LOG_PREFIX = '[EmilFlow]'
 DECIMAL_PLACES = 2
 
+# === SCHEDULER SERVICE REFRESH RATE IN SECONDS ===
+SERVICE_REFRESH = 60
+
 # === DRY RUN FOR OUTPUT (Don't spam my inbox when testing) === 
 DRY_RUN_OUTPUT = False
 
