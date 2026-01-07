@@ -7,7 +7,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema EminderSchedulerDB
 -- -----------------------------------------------------
--- DROP SCHEMA IF EXISTS `EminderSchedulerDB` ;
 
 -- -----------------------------------------------------
 -- Schema EminderSchedulerDB
@@ -43,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `EminderSchedulerDB`.`Recipients` (
   `Email` VARCHAR(100) NULL,
   `Phone` VARCHAR(100) NULL,
   `Active` TINYINT NOT NULL DEFAULT 1,
-  `DiscordHook` VARCHAR(100) NULL,
+  `DiscordHook` VARCHAR(500) NULL,
   PRIMARY KEY (`RecipientId`),
   UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) VISIBLE)
 ENGINE = InnoDB;
