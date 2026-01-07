@@ -4,9 +4,7 @@ from datetime import datetime,timedelta
 from eminder.config import colors
 from eminder.services import schedulemanager
 from eminder.utils import log,debug,info,warning,error,critical
-
-sleep_time = 15
-
+from eminder.config import SERVICE_REFRESH
 
 def job():
     while 0 < 1:
@@ -20,7 +18,7 @@ def job():
         print(f'Next refresh:   {str(next_time).split(".")[0]}')
         print('='*60)
         print(f'{colors.ENDC}')
-        time.sleep(sleep_time)
+        time.sleep(SERVICE_REFRESH)
         continue
 
 
