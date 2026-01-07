@@ -6,6 +6,9 @@ from eminder.services import schedulemanager
 from eminder.utils import log,debug,info,warning,error,critical
 from eminder.config import SERVICE_REFRESH
 
+sleep_time = SERVICE_REFRESH
+
+
 def job():
     while 0 < 1:
         schedulemanager.ScheduleManager().run()
