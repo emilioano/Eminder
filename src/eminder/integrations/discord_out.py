@@ -7,9 +7,12 @@ import requests
 def discord_send_message(webhook='None',content='Hej'):
 
     if not webhook:
-        webhook=DISCORD_WEBHOOK_ADMIN
-        content=f'Message is sent to admin to check as the recipients webhook is not properly setup! {content}.'
-        error(f'Message is sent to admin to check as the recipients webhook is not properly setup! {content}.')
+        if not DISCORD_WEBHOOK_ADMIN:
+            error(f'There is no webhook provided to send any notification to discord, please check setup! Message: {content}.')
+        else:
+            webhook=DISCORD_WEBHOOK_ADMIN
+            content=f'Message is sent to admin to check as the recipients webhook is not properly setup! {content}.'
+            error(f'Message is sent to admin to check as the recipients webhook is not properly setup! {content}.')
 
     webhook_url = webhook
     data = {

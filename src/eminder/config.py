@@ -25,7 +25,6 @@ DECIMAL_PLACES = 2
 # === DRY RUN FOR OUTPUT (Don't spam my inbox when testing) === 
 DRY_RUN_OUTPUT = False
 
-
 # .env finder
 env_path = find_dotenv(usecwd=True)
 if not env_path:
@@ -42,7 +41,6 @@ DBCONFIG = {
 'database': os.getenv('DB_NAME')
 }
 
-
 # === GOOGLE AUTH ===
 GOOGLECRED = Credentials(
 None,
@@ -54,7 +52,6 @@ scopes = [os.getenv('scopes')]
 )
 
 DISCORD_WEBHOOK_ADMIN = os.getenv('discord_webhook')
-
 
 # === TEXT COLORS ===
 class colors:
