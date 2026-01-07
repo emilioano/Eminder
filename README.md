@@ -1,4 +1,10 @@
-# Eminder
+▄▖   ▘   ▌    
+▙▖▛▛▌▌▛▌▛▌█▌▛▘
+▙▖▌▌▌▌▌▌▙▌▙▖▌ 
+
+Minimal personal assistant app powered by AI!
+
+============================================================
 
 Eminder is a personal assistant application which can schedualize tasks and will distribute notifications to designated destinations upon predefined timings. 
 AI feature to schedualize tasks is included.
