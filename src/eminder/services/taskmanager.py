@@ -210,7 +210,7 @@ def run_task_manager():
                             'channel':{'value':channel,'type':'integer','required':True},
                         }
     
-                        validate = inputvalidation.inputvalidation(val_fields)
+                        validate = inputvalidation(val_fields)
                         if not validate:
                             print('Invalid input in field(s) detected, please try again!')
                             selection = 2
