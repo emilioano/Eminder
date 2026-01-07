@@ -62,6 +62,6 @@ There is a logger that records relevant actions and generates .txt files which a
 
 * User management system 
 
-* Web front
+* Web front with navigation and extended functinality
 
 * Application published publicly
