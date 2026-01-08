@@ -36,7 +36,7 @@ CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON EminderSchedulerDB.* TO 'user'@'localhost';
 ```
 
-To install the Python applicaton:
+To install the Python application:
 ```bash
 # Set up a virtual environment (venv). Not mandatory but recommended.
 python3 -m venv .venv
@@ -67,7 +67,7 @@ The tasks will be delivered to the recipients upon desired trigger time.
 The available types is: once, daily, weekly, monthly, interval, yearly.
 There is a feature to let AI create the tasks based on user input which is very powerful.
 
-Besides from this, one instance of the schedulemanager should be run as a service in the background which will handle the trigger checks and distribution of notifications!
+Besides from this, one instance of the schedulemanager should be run as a service in the background which will handle the trigger checks and distribution of notifications! Preferably this runs on a server.
 
 The application also generates a performance report measuring operation times and generates files in the reports folder.
 There is a logger that records relevant actions and generates .txt files which are located in the logs folder.
