@@ -155,7 +155,7 @@ def fetchperformancerecords(horizon):
     p.Operation,
     p.Starttime,
     p.Finishtime,
-    DATEDIFF(second, p.Finishtime, p.Starttime) as Operationtime
+    TIMESTAMPDIFF(SECOND, p.Finishtime, p.Starttime) as Operationtime
     FROM Performance as p
     WHERE Starttime LIKE "{horizon}%"
     GROUP BY Id
