@@ -10,6 +10,13 @@ It includes an AI-powered feature to automatically create and schedualize tasks 
 
 Please set the parameters properly in the .env file. There is an .env.template file provided in the root folder, please rename to .env and enter your own details.
 
+Prerequisites
+```bash
+Python 3.10+
+MySQL server installed on the machine that will host the DB
+API keys for Gmail, Discord, and Gemini to use integration functions
+```
+
 To set up db:
 ```bash
 # Example on how to create the database on a Linux machine with MySQl
@@ -107,6 +114,7 @@ There is a logger that records relevant actions and generates .txt files which a
 * Application published and hosted publicly
 
 ## License
+MIT License
 ```bash
 Copyright (c) 2026 Emil Sjokvist
 
