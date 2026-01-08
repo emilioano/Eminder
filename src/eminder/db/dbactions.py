@@ -155,7 +155,7 @@ def fetchperformancerecords(horizon):
     p.Operation,
     p.Starttime,
     p.Finishtime,
-    DATEDIFF(seconds, p.Finishtime - p.Starttime) as Operationtime
+    DATEDIFF(second, p.Finishtime - p.Starttime) as Operationtime
     FROM Performance as p
     WHERE Starttime LIKE "{horizon}%"
     GROUP BY Id
@@ -163,5 +163,5 @@ def fetchperformancerecords(horizon):
     ;
     ''')
     records = cursor_dict.fetchall()
-    return records
+    return records  
 ### END REPORT CREATOR DB ACTIONS ###
