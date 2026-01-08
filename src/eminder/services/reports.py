@@ -80,7 +80,7 @@ def create_report(report_name='Performance report',horizon='Today'):
             min_per_operation = min(times)
 
             lines.append(f'     Count: {count_per_operation}.')
-            lines.append(f'     Total time spent: {str(time_per_operation)} s')
+            lines.append(f'     Total time spent: {time_per_operation:.2f} s')
             lines.append(f'     Average time: {average_per_operation:.2f} s.')
             lines.append(f'     Max time: {max_per_operation:.2f} s.')
             lines.append(f'     Min time: {min_per_operation:.2f} s.')
