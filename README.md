@@ -1,5 +1,5 @@
 # Eminder
-```bash
+```
 ███████╗███╗   ███╗██╗███╗   ██╗██████╗ ███████╗██████╗ 
 ██╔════╝████╗ ████║██║████╗  ██║██╔══██╗██╔════╝██╔══██╗
 █████╗  ██╔████╔██║██║██╔██╗ ██║██║  ██║█████╗  ██████╔╝
@@ -20,14 +20,14 @@ It includes an AI-powered feature to automatically create and schedualize tasks 
 Please set the parameters properly in the .env file. There is an .env.template file provided in the root folder, please rename to .env and enter your own details.
 
 Prerequisites
-```bash
+```
 Python 3.10+
 MySQL server installed on the machine that will host the DB
 API keys for Gmail, Discord, and Gemini to use integration functions
 ```
 
 To set up db:
-```bash
+```
 # Example on how to create the database on a Linux machine with MySQl
 mysql -u root < Eminder/dbmodel/EminderSchedulerDB.sql
 
@@ -73,7 +73,7 @@ The application also generates a performance report measuring operation times an
 There is a logger that records relevant actions and generates .txt files which are located in the logs folder.
 
 ## Project structure
-```bash
+```
 ├── dbmodel
 │   ├── EminderSchedulerDB.mwb
 │   └── EminderSchedulerDB.sql
@@ -124,7 +124,7 @@ There is a logger that records relevant actions and generates .txt files which a
 
 ## License
 MIT License
-```bash
+```
 Copyright (c) 2026 Emil Sjokvist
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
