@@ -1,8 +1,7 @@
 # Eminder
 
 Eminder is a personal assistant application which can schedualize tasks and will distribute notifications to designated destinations upon predefined timings. 
-AI feature to schedualize tasks is included.
-
+It includes an AI-powered feature to automatically create and schedualize tasks based on user input.
 
 ## Installation
 
@@ -26,8 +25,8 @@ To install the Python applicaton:
 # Set up a virtual environment (venv). Not mandatory but recommended.
 python3 -m venv .venv
 
-# Active venv. Note! /Scripts/ if Windows, /bin/ if Linux
-source .venv/Scripts/activate
+# Activate venv. Note! .venv/Scripts/activate if Windows, .venv/bin/activate if Linux
+source .venv/bin/activate
 
 # Install the Eminder project
 pip install -e .
@@ -106,3 +105,26 @@ There is a logger that records relevant actions and generates .txt files which a
 * User management system 
 * Web front with navigation and extended functionality
 * Application published and hosted publicly
+
+## License
+```bash
+Copyright (c) 2026 Emil Sjokvist
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
