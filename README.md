@@ -43,7 +43,6 @@ python3 -m eminder:schedulerservice
 
 # To uninstall the project:
 pip uninstall eminder
-
 ```
 
 ## Usage
@@ -58,10 +57,52 @@ Besides from this, one instance of the schedulemanager should be run as a servic
 The application also generates a performance report measuring operation times and generates files in the reports folder.
 There is a logger that records relevant actions and generates .txt files which are located in the logs folder.
 
+## Project structure
+```bash
+├── dbmodel
+│   ├── EminderSchedulerDB.mwb
+│   └── EminderSchedulerDB.sql
+├── logs
+├── reports
+├── src
+│   └── eminder
+│       ├── analysis
+│       │   ├── __init__.py
+│       │   └── performance.py
+│       ├── db
+│       │   ├── __init__.py
+│       │   └── dbactions.py
+│       ├── integrations
+│       │   ├── __init__.py
+│       │   ├── aimanager.py
+│       │   ├── discord_out.py
+│       │   └── mail_out.py
+│       ├── services
+│       │   ├── __init__.py
+│       │   ├── recipientmanager.py
+│       │   ├── reports.py
+│       │   ├── schedulemanager.py
+│       │   └── taskmanager.py
+│       ├── utils
+│       │   ├── __init__.py
+│       │   └── logger.py
+│       ├── validation
+│       │   ├── __init__.py
+│       │   └── inputvalidation.py
+│       ├── __init__.py
+│       ├── __main__.py
+│       ├── config.py
+│       ├── main.py
+│       └── schedulerservice.py
+├── .env.template
+├── .gitignore
+├── pyproject.toml
+├── README.md
+└── requirements.txt
+```
+
 ## Ideas for the future
 
 * User management system 
-
-* Web front with navigation and extended functinality
-
-* Application published publicly
+* Web front with navigation and extended functionality
+* Application published and hosted publicly
