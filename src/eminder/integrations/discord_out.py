@@ -24,7 +24,7 @@ def discord_send_message(webhook='None',content='Hej'):
     if not DRY_RUN_OUTPUT:
         response = requests.post(webhook_url, json=data)
         if response.status_code == 204:
-            log("Message sent successfully via Discord: {content}")
+            log(f"Message sent successfully via Discord: {content}")
         else:
             error(f"Error code: {response.status_code}. Error response text: {response.text}")
     else:
