@@ -1,4 +1,13 @@
 # Eminder
+```bash
+███████╗███╗   ███╗██╗███╗   ██╗██████╗ ███████╗██████╗ 
+██╔════╝████╗ ████║██║████╗  ██║██╔══██╗██╔════╝██╔══██╗
+█████╗  ██╔████╔██║██║██╔██╗ ██║██║  ██║█████╗  ██████╔╝
+██╔══╝  ██║╚██╔╝██║██║██║╚██╗██║██║  ██║██╔══╝  ██╔══██╗
+███████╗██║ ╚═╝ ██║██║██║ ╚████║██████╔╝███████╗██║  ██║
+╚══════╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝                          
+Minimal personal assistant app powered by AI!
+```
 
 Eminder is a personal assistant application which can schedualize tasks and will distribute notifications to designated destinations upon predefined timings. 
 It includes an AI-powered feature to automatically create and schedualize tasks based on user input.
