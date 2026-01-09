@@ -109,7 +109,7 @@ def createconnection(saved_id,recipient_id):
 def fetchtasks():
     cursor_dict.execute('''
     SELECT
-	t.Taskid,
+	t.TaskId,
 	t.Subject,
 	t.Message,
 	t.Dailyquote,
