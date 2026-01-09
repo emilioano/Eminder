@@ -108,13 +108,30 @@ def createconnection(saved_id,recipient_id):
 ### SCHEDULE MANAGER DB ACTIONS ###
 def fetchtasks():
     cursor_dict.execute('''
-    SELECT 
-    tr.*, 
-    t.*, 
-    r.* 
-    FROM TaskRecipients AS tr 
-    INNER JOIN Tasks as t on tr.Taskid = t.Taskid 
-    INNER JOIN Recipients as r on tr.RecipientId = r.RecipientId
+    SELECT
+	t.Taskid,
+	t.Subject,
+	t.Message,
+	t.Dailyquote,
+	t.Dailyweather,
+	t.Active,
+	t.Schedule,
+	t.Channel,
+	t.Location,
+	t.Lasttriggered,
+	t.Createdtime,
+	r.RecipientId,
+	r.Name,
+	r.Email,
+	r.Phone,
+	r.DiscordHook,
+	r.Active as RecipientActive
+FROM
+	TaskRecipients as tr
+INNER JOIN Tasks as t on
+	tr.TaskId = t.TaskId
+INNER JOIN Recipients as r on
+	tr.RecipientId = r.RecipientId
     ORDER BY t.TaskId ASC;
     ''')
     records = cursor_dict.fetchall()  
