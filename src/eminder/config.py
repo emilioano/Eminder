@@ -8,13 +8,14 @@ Demonstrates proper path handling using __file__ and pathlib.
 from pathlib import Path
 try:
     from dotenv import load_dotenv, find_dotenv
+    from google.oauth2.credentials import Credentials
 except ImportError:
     def load_dotenv(*args, **kwargs): pass
     def find_dotenv(*args, **kwargs): return None
 
 import os
 
-from google.oauth2.credentials import Credentials
+
 
 
 # === PATH CONFIGURATION ===
