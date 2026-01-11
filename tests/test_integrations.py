@@ -5,7 +5,6 @@ from eminder.integrations.mail_out import gmail_send_message
 from eminder.integrations.aimanager import AIprompt
 
 import json
-from unittest.mock import patch
 
 
 
