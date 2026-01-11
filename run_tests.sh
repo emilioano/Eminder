@@ -14,7 +14,10 @@ else
   python -m pip install pytest flake8 pytest-cov
 fi
 
+echo "Running flake"
 flake8 . > flakereport.txt
+
+echo "Runnint PyTest"
 pytest --disable-warnings
 
 echo "Done!"
