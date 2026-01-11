@@ -231,7 +231,7 @@ def run_task_manager():
     
                         recipient_question = str(input('Recipients (1. Add new. 2. Add recipient from existing): '))
                         if recipient_question == str(1):
-                            recipientmanager.run_recipient_program(i)
+                            recipientmanager.run_recipient_program()
                         if recipient_question == str(2):
                             selection = 5
     
