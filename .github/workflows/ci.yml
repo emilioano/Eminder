@@ -40,6 +40,10 @@ jobs:
       - name: Flake8 (fail only fail on critical issus)
         run: |
           flake8 .
+
+      - name: Pytest (with coverage)
+        run: |
+          pytest --cov=. --cov-report=xml --cov-report=term-missin
       
       - name: Upload coverage XML
         if: always()
