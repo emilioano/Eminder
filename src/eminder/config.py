@@ -6,10 +6,16 @@ Demonstrates proper path handling using __file__ and pathlib.
 """
 
 from pathlib import Path
-from dotenv import load_dotenv,find_dotenv
+try:
+    from dotenv import load_dotenv, find_dotenv
+    from google.oauth2.credentials import Credentials
+except ImportError:
+    def load_dotenv(*args, **kwargs): pass
+    def find_dotenv(*args, **kwargs): return None
+
 import os
 
-from google.oauth2.credentials import Credentials
+
 
 
 # === PATH CONFIGURATION ===
@@ -23,7 +29,7 @@ LOG_PREFIX = '[EmilFlow]'
 DECIMAL_PLACES = 2
 
 # === SCHEDULER SERVICE REFRESH RATE IN SECONDS ===
-SERVICE_REFRESH = 60
+SERVICE_REFRESH = 15
 
 # === DRY RUN FOR OUTPUT (Don't spam my inbox when testing) === 
 DRY_RUN_OUTPUT = False
