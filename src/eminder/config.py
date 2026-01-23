@@ -27,8 +27,11 @@ DECIMAL_PLACES = 2
 # === SCHEDULER SERVICE REFRESH RATE IN SECONDS ===
 SERVICE_REFRESH = 15
 
+# === HOW OFTEN VISUAL REPORTS SHOULD BE REFRESHED IN SECONDS ===
+REPORT_REFRESH = 30
+
 # === DRY RUN FOR OUTPUT (Don't spam my inbox when testing) === 
-DRY_RUN_OUTPUT = False
+DRY_RUN_OUTPUT = True
 
 # .env finder
 env_path = find_dotenv(usecwd=True)

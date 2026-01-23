@@ -5,6 +5,7 @@ from eminder.utils import log,debug,info,warning,error,critical
 from eminder.config import colors
 
 
+
 def eminder_logo_color():
     logo = r'''
 ███████╗███╗   ███╗██╗███╗   ██╗██████╗ ███████╗██████╗ 

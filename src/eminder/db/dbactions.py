@@ -7,7 +7,7 @@ try:
     cursor = DBConn.cursor()
     cursor_dict = DBConn.cursor(dictionary=True)
 except Exception as err:
-    error(f'Error: {err}')    
+    error(f'Error: {err}')  
 
 ### RECIPIENT MANAGER DB ACTIONS ###
 def viewrecipients():

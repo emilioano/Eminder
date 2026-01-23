@@ -1,6 +1,8 @@
 import json
 import datetime
 
+import asyncio
+
 from eminder.utils import log,debug,info,warning,error,critical
 from eminder.config import colors
 from eminder.integrations import mail_out, discord_out
@@ -72,14 +74,14 @@ class ScheduleManager:
             print(f'Trigger time: {trigger_dt}. Now time: {self.date_time}')
             if trigger_dt <= self.date_time and last_triggered is None:
                 print('Trigger hit!!')
-                self.execute(row, channel, mail_subject, task_message)
+                asyncio.run(self.execute(row, channel, mail_subject, task_message))
 
         elif schedule_type == 'daily' and trigger_time:
             print('Schedule type is Daily!')
             print(f'Trigger time: {trigger_dt}. Now time: {self.date_time}')
             if (trigger_dt <= self.date_time.time()) and (last_triggered is None or last_triggered.date() < self.today):
                 print('Trigger hit!!')
-                self.execute(row, channel, mail_subject, task_message)
+                asyncio.run(self.execute(row, channel, mail_subject, task_message))
 
         elif schedule_type == 'monthly' and trigger_time:
             print('Schedule type is Monthly!')
@@ -92,7 +94,7 @@ class ScheduleManager:
 
             if (current_weekday == trigger_days) and (trigger_dt <= self.date_time.time()) and (last_triggered is None or last_triggered.date() < self.today):
                 print('Trigger hit!!')
-                self.execute(row, channel, mail_subject, task_message)
+                asyncio.run(self.execute(row, channel, mail_subject, task_message))
 
         elif schedule_type == 'weekly' and trigger_time:
             print('Schedule type is Weekly!')
@@ -117,7 +119,7 @@ class ScheduleManager:
 
             if (day in trigger_days) and (trigger_dt <= self.date_time.time()) and (last_triggered is None or last_triggered.date() < self.today):
                 print('Trigger hit!!')
-                self.execute(row, channel, mail_subject, task_message)
+                asyncio.run(self.execute(row, channel, mail_subject, task_message))
 
         elif schedule_type == 'interval' and trigger_time:
             print('Schedule type is Interval!')
@@ -136,7 +138,7 @@ class ScheduleManager:
 
             if (next_trigger <= self.date_time) and (last_triggered is None or last_triggered.date() < self.today):
                 print('Trigger hit!!')
-                self.execute(row, channel, mail_subject, task_message)
+                asyncio.run(self.execute(row, channel, mail_subject, task_message))
 
         elif schedule_type == 'yearly' and trigger_time:
             print('Schedule type is Yearly!')
@@ -149,16 +151,24 @@ class ScheduleManager:
 
             if (trigger_no_year <= now_no_year) and (last_triggered is None or last_triggered.year <= self.year-1):
                 print('Trigger hit!!')  
-                self.execute(row, channel, mail_subject, task_message)
+                asyncio.run(self.execute(row, channel, mail_subject, task_message))
 
-    def execute(self, row, channel, subject, message):
+    async def execute(self, row, channel, subject, message):
         recipient_email = row.get('Email')
         recipient_discordhook = row.get('DiscordHook')
             
-        start_time, finish_time, operation_time = performance.timed_operation(self.messageout, channel, recipient_email, subject, message, recipient_discordhook)
-        log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
-
-        dbactions.setlasttriggered(self.date_time, row.get('TaskId'))
+        try:
+            start_time, finish_time, operation_time = await asyncio.to_thread(performance.timed_operation,self.messageout, channel, recipient_email, subject, message, recipient_discordhook)
+            log(f'Operation time: {operation_time:.2f}s. Start time: {start_time}. Finish time {finish_time}.')
+        except Exception as err:
+            error(f'Error when excecuting messageout function: {err}.')
+            return
+ 
+        try:
+            await asyncio.to_thread(dbactions.setlasttriggered,self.date_time, row.get('TaskId'))
+        except Exception as err:
+            error(f'Error when updatering last triggered for the task: {err}')
+            return
 
     def run(self):
         def schedulerjob():
