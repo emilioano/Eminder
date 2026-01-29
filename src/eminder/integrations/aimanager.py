@@ -70,7 +70,7 @@ Following is the exact format and nothing should come before {{ or after}}:
     aidata = {'contents':[
         {'parts':[{'text':askprompt}
     ]}]}
-    airesponse = requests.post(ai_endpoint,headers=headers,data=json.dumps(aidata)  )
+    airesponse = requests.post(ai_endpoint,headers=headers,data=json.dumps(aidata),verify=False)
     if airesponse.status_code==200:
         airesult = airesponse.json()
         airesulttext = airesult['candidates'][0]['content']['parts'][0]['text']
